@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classes from './dice.module.scss';
 import {Dices} from '../../dices'
+import { useTypedSelector } from '../../hooks/useTypedSelector';
+import { useActions } from '../../hooks/useActions';
 
 const Dice: React.FC = () => {
-    const [diceNumber, setDiceNumber] = useState(3)
-    const [rolling, setRolling] = useState(false)
+    const { count, rolling} = useTypedSelector(state => state.dice)
+    const { setDice, setRolling } = useActions()
 
     const roll = () => {
-        setRolling(true)
+        setRolling()
         setTimeout(() => {
-            const count = Math.floor( Math.random() * 6 ) + 1
-            setDiceNumber(count)
-            setRolling(false)
+            setDice()
         }, 300 + Math.floor( Math.random() * 1500 ) + 1)
         
     }
@@ -22,7 +22,7 @@ const Dice: React.FC = () => {
             { // вывод картинки кубика в зависимости от выпавшего значения
                 (() => {
                     if(rolling) return <img src={Dices.roll} alt="" width="70" height="70" />
-                    switch (diceNumber) {
+                    switch (count) {
                         case 1:
                             return <img src={Dices.dice1} alt="" width="70" height="70" />
                         case 2:

@@ -1,9 +1,6 @@
-interface IUserState {
-    login: string,
-    role: string
-}
+import { IDiceState } from '../types/diceType';
 
-export const UserInitialState: IUserState = {
-    login: '',
-    role: ''
+export const DiceInitialState: IDiceState = {
+    count: 1,
+    rolling: false
 }
