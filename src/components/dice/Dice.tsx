@@ -1,28 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classes from './dice.module.scss';
-import {Dices} from '../../dices'
+import { Dices } from '../../dices'
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
 
-const Dice: React.FC = () => {
-    const { count, rolling} = useTypedSelector(state => state.dice)
-    const { setDice, setRolling } = useActions()
+interface IDiceProps {
+    diceId: number,
+    unrollFunc: any
+}
 
-    const roll = () => {
-        setRolling()
+const Dice: React.FC<IDiceProps> = (props) => {
+    const { count, rolling, rollCounter } = useTypedSelector(state => state.dice)
+    const { diceId, unrollFunc } = props
+
+    useEffect(() => {
         setTimeout(() => {
-            setDice()
-        }, 300 + Math.floor( Math.random() * 1500 ) + 1)
-        
-    }
+            unrollFunc()
+        }, 500 + Math.floor(Math.random() * 1200) )
+    }, [rollCounter])
 
     return (
         <div className={classes.container}>
 
             { // вывод картинки кубика в зависимости от выпавшего значения
                 (() => {
-                    if(rolling) return <img src={Dices.roll} alt="" width="70" height="70" />
-                    switch (count) {
+                    if (rolling[diceId]) return <img src={Dices.roll} alt="" width="70" height="70" />
+                    switch (count[diceId]) {
                         case 1:
                             return <img src={Dices.dice1} alt="" width="70" height="70" />
                         case 2:
@@ -41,7 +44,7 @@ const Dice: React.FC = () => {
                 })()
             }
 
-            <div className={classes.rollBtn} onClick={roll}> ROLL</div>
+            {/* <div className={classes.rollBtn} onClick={unrollFunc}> stop </div> */}
 
         </div>
     );
