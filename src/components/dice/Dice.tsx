@@ -16,7 +16,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
     useEffect(() => {
         setTimeout(() => {
             unrollFunc()
-        }, 500 + Math.floor(Math.random() * 1200) )
+        }, 500 + Math.floor(Math.random() * 3000) )
     }, [rollCounter])
 
     return (
