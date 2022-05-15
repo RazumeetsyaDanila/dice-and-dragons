@@ -5,6 +5,15 @@ export interface IDiceState {
     specials: string[]
 }
 
+export interface IDicesState {
+    dice: {
+        count: number,
+        rolling: boolean,
+        special: string
+    }[],
+    rollCounter: number
+}
+
 export interface IHeroState {
     health: number;
     armor: number;

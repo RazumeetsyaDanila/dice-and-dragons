@@ -11,63 +11,12 @@ export const setDice = () => {
     }
 }
 
-export const unsetRolling_0 = () => {
+export const unsetRolling = (diceId: number) => {
     return (dispatch: Dispatch<IDiceAction>) => {
         try {
-            dispatch({ type: DiceActionTypes.UNSET_DICE0_ROLLING })
+            dispatch({ type: DiceActionTypes.UNSET_DICE_ROLLING, payload: diceId })
         } catch (e) {
             console.log("ba");
         }
     }
 }
-
-export const unsetRolling_1 = () => {
-    return (dispatch: Dispatch<IDiceAction>) => {
-        try {
-            dispatch({ type: DiceActionTypes.UNSET_DICE1_ROLLING })
-        } catch (e) {
-            console.log("ba");
-        }
-    }
-}
-
-export const unsetRolling_2 = () => {
-    return (dispatch: Dispatch<IDiceAction>) => {
-        try {
-            dispatch({ type: DiceActionTypes.UNSET_DICE2_ROLLING })
-        } catch (e) {
-            console.log("ba");
-        }
-    }
-}
-
-export const unsetRolling_3 = () => {
-    return (dispatch: Dispatch<IDiceAction>) => {
-        try {
-            dispatch({ type: DiceActionTypes.UNSET_DICE3_ROLLING })
-        } catch (e) {
-            console.log("ba");
-        }
-    }
-}
-
-export const unsetRolling_4 = () => {
-    return (dispatch: Dispatch<IDiceAction>) => {
-        try {
-            dispatch({ type: DiceActionTypes.UNSET_DICE4_ROLLING })
-        } catch (e) {
-            console.log("ba");
-        }
-    }
-}
-
-export const unsetRolling_5 = () => {
-    return (dispatch: Dispatch<IDiceAction>) => {
-        try {
-            dispatch({ type: DiceActionTypes.UNSET_DICE5_ROLLING })
-        } catch (e) {
-            console.log("ba");
-        }
-    }
-}
-

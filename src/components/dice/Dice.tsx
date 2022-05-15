@@ -11,11 +11,12 @@ interface IDiceProps {
 
 const Dice: React.FC<IDiceProps> = (props) => {
     const { counts, rolling, rollCounter, specials } = useTypedSelector(state => state.dice)
+    const { dices} = useTypedSelector(state => state.dices)
     const { diceId, unrollFunc } = props
 
     useEffect(() => {
         setTimeout(() => {
-            unrollFunc()
+            unrollFunc(diceId)
         }, 500 + Math.floor(Math.random() * 3000) )
     }, [rollCounter])
 
