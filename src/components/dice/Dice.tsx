@@ -10,8 +10,8 @@ interface IDiceProps {
 }
 
 const Dice: React.FC<IDiceProps> = (props) => {
-    const { counts, rolling, rollCounter, specials } = useTypedSelector(state => state.dice)
-    const { dices} = useTypedSelector(state => state.dices)
+    // const { counts, rolling, rollCounter, specials } = useTypedSelector(state => state.dice)
+    const { dice, rollCounter} = useTypedSelector(state => state.dices)
     const { diceId, unrollFunc } = props
 
     useEffect(() => {
@@ -25,10 +25,10 @@ const Dice: React.FC<IDiceProps> = (props) => {
 
             { // вывод картинки кубика в зависимости от выпавшего значения
                 (() => {
-                    if (rolling[diceId]) return <img src={Dices.roll} alt="" width="70" height="70" />
-                    switch (counts[diceId]) {
+                    if (dice[diceId].rolling) return <img src={Dices.roll} alt="" width="70" height="70" />
+                    switch (dice[diceId].count) {
                         case 1:
-                            switch (specials[diceId]){
+                            switch (dice[diceId].special){
                                 case 'attack':
                                     return <img src={SpecialDices.attack1} alt="..." width="70" height="70" />
                                 case 'coin':
@@ -44,7 +44,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                             }
                             break                            
                         case 2:
-                            switch (specials[diceId]){
+                            switch (dice[diceId].special){
                                 case 'attack':
                                     return <img src={SpecialDices.attack2} alt="..." width="70" height="70" />
                                 case 'coin':
@@ -60,7 +60,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                             }
                             break 
                         case 3:
-                            switch (specials[diceId]){
+                            switch (dice[diceId].special){
                                 case 'attack':
                                     return <img src={SpecialDices.attack3} alt="..." width="70" height="70" />
                                 case 'coin':
@@ -76,7 +76,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                             }
                             break 
                         case 4:
-                            switch (specials[diceId]){
+                            switch (dice[diceId].special){
                                 case 'attack':
                                     return <img src={SpecialDices.attack4} alt="..." width="70" height="70" />
                                 case 'coin':
@@ -92,7 +92,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                             }
                             break 
                         case 5:
-                            switch (specials[diceId]){
+                            switch (dice[diceId].special){
                                 case 'attack':
                                     return <img src={SpecialDices.attack5} alt="..." width="70" height="70" />
                                 case 'coin':
@@ -108,7 +108,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                             }
                             break 
                         case 6:
-                            switch (specials[diceId]){
+                            switch (dice[diceId].special){
                                 case 'attack':
                                     return <img src={SpecialDices.attack6} alt="..." width="70" height="70" />
                                 case 'coin':

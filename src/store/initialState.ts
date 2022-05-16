@@ -9,31 +9,37 @@ export const DiceInitialState: IDiceState = {
 
 export const DicesInitialState: IDicesState = {
     dice: [{
+        _id: 0,
         count: 1,
         rolling: false,
         special: 'magic'
     },
     {
+        _id: 1,
         count: 1,
         rolling: false,
         special: 'magic'
     },
     {
+        _id: 2,
         count: 1,
         rolling: false,
         special: 'magic'
     },
     {
+        _id: 3,
         count: 1,
         rolling: false,
         special: 'magic'
     },
     {
+        _id: 4,
         count: 1,
         rolling: false,
         special: 'magic'
     },
     {
+        _id: 5,
         count: 1,
         rolling: false,
         special: 'magic'
