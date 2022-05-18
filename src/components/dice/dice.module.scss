@@ -2,23 +2,181 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-
+    width: 75px;
 }
 
-.rollBtn{
-    width: 100px;
-    height: 40px;
-    background-color: #1D3557;
-    color: #bbbbbb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    user-select: none;
-    border-radius: 4px;
+// .rollBtn{
+//     width: 100px;
+//     height: 40px;
+//     background-color: #1D3557;
+//     color: #bbbbbb;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     user-select: none;
+//     border-radius: 4px;
+//     &:hover{
+//         cursor: pointer;
+//         background-color: #2b4f81
+//     }
+// }
+
+%dice {
+    width: 70px;
+    height: 70px;
     &:hover{
+        width: 72px;
+        height: 72px;
         cursor: pointer;
-        background-color: #2b4f81
+        
     }
+    &:hover path:not(.notChangeFill){
+        // fill:#2b4f81;
+        // fill:#1f406d;
+    }
+}
+  
+
+.attack1Dice{
+    @extend %dice
+}
+
+.coin1Dice{
+    @extend %dice
+}
+
+.life1Dice{
+    @extend %dice
+}
+
+.magic1Dice{
+    @extend %dice
+}
+
+.roar1Dice{
+    @extend %dice
+}
+
+.shield1Dice{
+    @extend %dice
+}
+
+.attack2Dice{
+    @extend %dice
+}
+
+.coin2Dice{
+    @extend %dice
+}
+
+.life2Dice{
+    @extend %dice
+}
+
+.magic2Dice{
+    @extend %dice
+}
+
+.roar2Dice{
+    @extend %dice
+}
+
+.shield2Dice{
+    @extend %dice
+}
+
+.attack3Dice{
+    @extend %dice
+}
+
+.coin3Dice{
+    @extend %dice
+}
+
+.life3Dice{
+    @extend %dice
+}
+
+.magic3Dice{
+    @extend %dice
+}
+
+.roar3Dice{
+    @extend %dice
+}
+
+.shield3Dice{
+    @extend %dice
+}
+
+.attack4Dice{
+    @extend %dice
+}
+
+.coin4Dice{
+    @extend %dice
+}
+
+.life4Dice{
+    @extend %dice
+}
+
+.magic4Dice{
+    @extend %dice
+}
+
+.roar4Dice{
+    @extend %dice
+}
+
+.shield4Dice{
+    @extend %dice
+}
+
+.attack5Dice{
+    @extend %dice
+}
+
+.coin5Dice{
+    @extend %dice
+}
+
+.life5Dice{
+    @extend %dice
+}
+
+.magic5Dice{
+    @extend %dice
+}
+
+.roar5Dice{
+    @extend %dice
+}
+
+.shield5Dice{
+    @extend %dice
+}
+
+.attack6Dice{
+    @extend %dice
+}
+
+.coin6Dice{
+    @extend %dice
+}
+
+.life6Dice{
+    @extend %dice
+}
+
+.magic6Dice{
+    @extend %dice
+}
+
+.roar6Dice{
+    @extend %dice
+}
+
+.shield6Dice{
+    @extend %dice
 }

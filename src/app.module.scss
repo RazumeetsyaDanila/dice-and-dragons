@@ -2,12 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    justify-content: center;
+    // margin-top: 20px;
+    height: 100vh;
 
 }
 
 .diceContainer{
     display: flex;
+    height: 80px;
 }
 
 .rollBtn{
@@ -18,11 +21,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
     user-select: none;
     border-radius: 4px;
     &:hover{
         cursor: pointer;
-        background-color: #2b4f81
+        // background-color: #2b4f81
+        background-color: #1f406d
     }
 }

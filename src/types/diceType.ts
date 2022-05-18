@@ -27,6 +27,7 @@ export interface IHeroState {
 
 export enum DiceActionTypes {
     SET_DICE_COUNT = 'SET_DICE_COUNT',
+    SET_DICES_COUNT = 'SET_DICES_COUNT',
     UNSET_DICE_ROLLING = 'UNSET_DICE_ROLLING'
 }
 
@@ -40,9 +41,17 @@ interface ISetDiceCountAction {
     }
 }
 
+interface ISetDicesCountAction {
+    type: DiceActionTypes.SET_DICES_COUNT,
+    payload: {
+        counts: number[],
+        specials: string[]
+    }
+}
+
 interface ISetDiceRollingAction {
     type: DiceActionTypes.UNSET_DICE_ROLLING,
     payload: number
 }
 
-export type IDiceAction = ISetDiceCountAction | ISetDiceRollingAction
+export type IDiceAction = ISetDiceCountAction | ISetDiceRollingAction | ISetDicesCountAction
