@@ -13,12 +13,16 @@ function App() {
   return (
     <BrowserRouter>
       <div className={classes.container}>
-        <div className={classes.diceContainer}>
-          {
-            dice.map(d => <Dice diceId={d._id} />)
-          }
+        <div className={classes.dicesContainer}>
+          <div className={classes.diceContainer}>
+            {
+              dice.map(d => <Dice diceId={d._id} key={d._id} />)
+            }
+          </div>
+          <div className={classes.rollBtn} onClick={setDices}> ROLL</div>
         </div>
-        <div className={classes.rollBtn} onClick={setDices}> ROLL</div>
+
+
       </div>
     </BrowserRouter>
   );

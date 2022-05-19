@@ -45,6 +45,15 @@ export const DicesInitialState: IDicesState = {
         special: 'magic'
     }
     ],
+    rollResult: {
+        life: 0,
+        attack: 0,
+        coin: 0,
+        magic: 0,
+        roar: 0,
+        shield: 0,
+        numeral: 0
+    },
     rollCounter: 0
 }
 

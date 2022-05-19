@@ -3,14 +3,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // margin-top: 20px;
     height: 100vh;
-
 }
 
 .diceContainer{
     display: flex;
     height: 80px;
+}
+
+.dicesContainer{
+    height: 150px;
+    width: 500px;
+    // border: #1D3557 2px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .rollBtn{
@@ -23,6 +32,7 @@
     justify-content: center;
     user-select: none;
     border-radius: 4px;
+    // margin-bottom: 20px;
     &:hover{
         cursor: pointer;
         // background-color: #2b4f81

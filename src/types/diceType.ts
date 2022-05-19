@@ -12,6 +12,15 @@ export interface IDicesState {
         rolling: boolean,
         special: string
     }[],
+    rollResult: {
+        life: number,
+        attack: number,
+        coin: number,
+        magic: number,
+        roar: number,
+        shield: number,
+        numeral: number
+    },
     rollCounter: number
 }
 

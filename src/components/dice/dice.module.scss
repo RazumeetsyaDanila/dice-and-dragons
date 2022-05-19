@@ -5,22 +5,6 @@
     width: 75px;
 }
 
-// .rollBtn{
-//     width: 100px;
-//     height: 40px;
-//     background-color: #1D3557;
-//     color: #bbbbbb;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     user-select: none;
-//     border-radius: 4px;
-//     &:hover{
-//         cursor: pointer;
-//         background-color: #2b4f81
-//     }
-// }
-
 %dice {
     width: 70px;
     height: 70px;
@@ -35,6 +19,24 @@
     // }
 }
   
+.oneDice{
+    @extend %dice
+}
+.twoDice{
+    @extend %dice
+}
+.threeDice{
+    @extend %dice
+}
+.fourDice{
+    @extend %dice
+}
+.fiveDice{
+    @extend %dice
+}
+.sixDice{
+    @extend %dice
+}
 
 .attack1Dice{
     @extend %dice
