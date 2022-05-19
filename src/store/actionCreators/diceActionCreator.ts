@@ -42,7 +42,7 @@ export const unsetRolling = (diceId: number) => {
         try {
             setTimeout(() => {
                 dispatch({ type: DiceActionTypes.UNSET_DICE_ROLLING, payload: diceId })
-            }, 1000 + Math.floor(Math.random() * 1000))
+            }, 1300 + Math.floor(Math.random() * 500))
         } catch (e) {
             console.log("ba");
         }

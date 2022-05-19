@@ -1,30 +1,21 @@
 import React, { useEffect } from 'react';
 import classes from './dice.module.scss';
-import { Dices, SpecialDices } from '../../dices';
+import { Dices } from '../../dices';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
 
 interface IDiceProps {
-    diceId: number,
-    // unrollFunc: any,
-    // setDiceFunc: any
+    diceId: number
 }
 
 const Dice: React.FC<IDiceProps> = (props) => {
-    // const { counts, rolling, rollCounter, specials } = useTypedSelector(state => state.dice)
     const { dice, rollCounter } = useTypedSelector(state => state.dices)
-    // const { diceId, unrollFunc, setDiceFunc } = props
     const { diceId } = props
     const { setDice, unsetRolling } = useActions()
 
     useEffect(() => {
         unsetRolling(diceId)
     }, [rollCounter])
-
-    const style = {
-        height: 100+"px",
-         width: 100+"px"
-      };
 
     return (
         <div className={classes.container}>
