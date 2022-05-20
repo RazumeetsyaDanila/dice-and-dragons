@@ -15,13 +15,13 @@ function App() {
       <div className={classes.container}>
         {!dice[0].rolling && !dice[1].rolling && !dice[2].rolling && !dice[3].rolling && !dice[4].rolling && !dice[5].rolling ?
           <div className={classes.rollResult}>
-            <p>Attack: {rollResult.attack}</p>
-            <p>Life: {rollResult.life}</p>
-            <p>Coin: {rollResult.coin}</p>
-            <p>Shield: {rollResult.shield}</p>
-            <p>Roar: {rollResult.roar}</p>
-            <p>Magic: {rollResult.magic}</p>
-            <p>Numeral: {rollResult.numeral}</p>
+            <p>Attack: {rollResult.attack ? <span className={classes.countSpan}>{rollResult.attack}</span> : 0}</p>
+            <p>Life: {rollResult.life ? <span className={classes.countSpan}>{rollResult.life}</span> : 0}</p>
+            <p>Coin: {rollResult.coin ? <span className={classes.countSpan}>{rollResult.coin}</span> : 0}</p>
+            <p>Shield: {rollResult.shield ? <span className={classes.countSpan}>{rollResult.shield}</span> : 0}</p>
+            <p>Roar: {rollResult.roar ? <span className={classes.countSpan}>{rollResult.roar}</span> : 0}</p>
+            <p>Magic: {rollResult.magic ? <span className={classes.countSpan}>{rollResult.magic}</span> : 0}</p>
+            <p>Numeral: {rollResult.numeral ? <span className={classes.countSpan}>{rollResult.numeral}</span> : 0}</p>
           </div>
           :
           <div className={classes.rollResult}>
