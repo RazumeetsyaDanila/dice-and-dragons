@@ -3,6 +3,9 @@
     flex-direction: column;
     align-items: center;
     width: 75px;
+    @media (max-width: 600px) {
+        width: 60px;
+    }
 }
 
 %dice {
@@ -17,8 +20,19 @@
     //     // fill:#2b4f81;
     //     // fill:#1f406d;
     // }
+    @media (max-width: 600px) {
+        width: 60px;
+        height: 60px;
+        &:hover{
+            width: 62px;
+            height: 62px; 
+        }
+    }
 }
-  
+
+.rollDice{
+    @extend %dice
+}
 .oneDice{
     @extend %dice
 }

@@ -49,7 +49,7 @@ export const DicesInitialState: IDicesState = {
         life: 0,
         attack: 0,
         coin: 0,
-        magic: 0,
+        magic: 6,
         roar: 0,
         shield: 0,
         numeral: 0

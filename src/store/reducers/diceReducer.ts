@@ -5,14 +5,26 @@ import { IDiceAction, IDicesState, DiceActionTypes } from '../../types/diceType'
 export const dicesReducer = (state = DicesInitialState, action: IDiceAction): IDicesState => {
     switch (action.type) {
         case DiceActionTypes.SET_DICE_COUNT:
-            const special = state.dice[action.payload._id].special
-            const oldCount = state.dice[action.payload._id].count
-            const newCount = state.rollResult[special] - oldCount
-            return { ...state, 
+            const id = action.payload._id
+            const oldSpecial = state.dice[id].special
+            const oldCount = state.dice[id].count
+            const newSpecial = action.payload.special
+            const newCount = action.payload.count
+            const oldResultCount = state.rollResult[oldSpecial]
+            const oldNewResultCount = state.rollResult[newSpecial]
+            if (oldSpecial !== newSpecial){
+                return { ...state, 
+                    dice: state.dice.map(d => d._id === action.payload._id ? action.payload : d), 
+                    rollResult: { ...state.rollResult, [oldSpecial]: oldResultCount - oldCount, [newSpecial]:  oldNewResultCount + newCount}, 
+                    rollCounter: ++state.rollCounter 
+                }
+            }
+            else return { ...state, 
                 dice: state.dice.map(d => d._id === action.payload._id ? action.payload : d), 
-                rollResult: { ...state.rollResult, [special]: state.dice[action.payload._id].count+newCount, [action.payload.special]:  +action.payload.count}, 
+                rollResult: { ...state.rollResult, [oldSpecial]: oldResultCount - oldCount + newCount}, 
                 rollCounter: ++state.rollCounter 
             }
+            
         case DiceActionTypes.SET_DICES_COUNT:
             return {
                 ...state, dice: state.dice.map(d => {

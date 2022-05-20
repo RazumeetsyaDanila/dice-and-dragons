@@ -41,7 +41,7 @@ function App() {
               dice.map(d => <Dice diceId={d._id} key={d._id} />)
             }
           </div>
-          <div className={classes.rollBtn} onClick={setDices}> ROLL</div>
+          <div className={classes.rollBtn} onClick={setDices}> ROLL ALL </div>
         </div>
       </div>
     </BrowserRouter>

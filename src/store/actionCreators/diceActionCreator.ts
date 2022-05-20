@@ -3,12 +3,12 @@ import { DiceActionTypes, IDiceAction } from '../../types/diceType';
 
 export const setDice = (diceId: number) => {
     return (dispatch: Dispatch<IDiceAction>) => {
-        const specialNames: string[] = ['attack', 'life', 'shield', 'roar', 'magic', 'coin', 'numeral']
+        const specialNames: string[] = ['attack', 'life', 'shield', 'roar', 'magic', 'coin', 'numeral', 'numeral', 'numeral', 'numeral']
         const newDice = {
             _id: diceId,
             count: Math.floor(Math.random() * 6) + 1,
             rolling: true,
-            special: specialNames[Math.floor(Math.random() * 7)]
+            special: specialNames[Math.floor(Math.random() * 10)]
         }
         try {
             dispatch({ type: DiceActionTypes.SET_DICE_COUNT, payload: newDice })
@@ -20,14 +20,14 @@ export const setDice = (diceId: number) => {
 
 export const setDices = () => {
     return (dispatch: Dispatch<IDiceAction>) => {
-        const specialNames: string[] = ['attack', 'life', 'shield', 'roar', 'magic', 'coin', 'numeral']
+        const specialNames: string[] = ['attack', 'life', 'shield', 'roar', 'magic', 'coin', 'numeral', 'numeral', 'numeral', 'numeral']
         const counts: number[] = []
         for(let i = 0; i < 6; i++){
             counts.push(Math.floor(Math.random() * 6) + 1)
         }
         const specials: string[] = []
         for(let i = 0; i < 6; i++){
-            specials.push(specialNames[Math.floor(Math.random() * 7)])
+            specials.push(specialNames[Math.floor(Math.random() * 10)])
         }
         type rollResultType = {
             [key: string]: number
