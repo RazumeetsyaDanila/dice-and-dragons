@@ -29,8 +29,23 @@ export const setDices = () => {
         for(let i = 0; i < 6; i++){
             specials.push(specialNames[Math.floor(Math.random() * 7)])
         }
+        type rollResultType = {
+            [key: string]: number
+        }
+        const rollResult: rollResultType = {
+            life: 0,
+            attack: 0,
+            coin: 0,
+            magic: 0,
+            roar: 0,
+            shield: 0,
+            numeral: 0
+        }
+        for (let i = 0; i < 6; i++){
+            rollResult[specials[i]] += counts[i]
+        }
         try {
-            dispatch({ type: DiceActionTypes.SET_DICES_COUNT, payload: {counts: counts, specials: specials} })
+            dispatch({ type: DiceActionTypes.SET_DICES_COUNT, payload: {counts: counts, specials: specials, rollResult: rollResult} })
         } catch (e) {
             console.log("ba");
         }

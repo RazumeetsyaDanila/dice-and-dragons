@@ -13,13 +13,7 @@ export interface IDicesState {
         special: string
     }[],
     rollResult: {
-        life: number,
-        attack: number,
-        coin: number,
-        magic: number,
-        roar: number,
-        shield: number,
-        numeral: number
+        [key: string]: number
     },
     rollCounter: number
 }
@@ -50,11 +44,15 @@ interface ISetDiceCountAction {
     }
 }
 
+
 interface ISetDicesCountAction {
     type: DiceActionTypes.SET_DICES_COUNT,
     payload: {
         counts: number[],
-        specials: string[]
+        specials: string[],
+        rollResult: {
+            [key: string]: number
+        }
     }
 }
 
