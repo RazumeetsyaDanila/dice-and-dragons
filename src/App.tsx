@@ -5,6 +5,7 @@ import Dice from './components/dice/Dice';
 import { useActions } from './hooks/useActions';
 import classes from './app.module.scss'
 import { useTypedSelector } from './hooks/useTypedSelector';
+import dragonImg from './img/dragons/Dragon.svg';
 
 function App() {
   const { setDices } = useActions()
@@ -34,7 +35,8 @@ function App() {
             <p>Numeral: ?</p>
           </div>
         }
-
+        {/* дракон */}
+        <img src={dragonImg} alt="..." />
         <div className={classes.dicesContainer}>
           <div className={classes.diceContainer}>
             {
