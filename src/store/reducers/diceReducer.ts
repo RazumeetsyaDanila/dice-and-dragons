@@ -8,9 +8,11 @@ export const dicesReducer = (state = DicesInitialState, action: IDiceAction): ID
             const special = state.dice[action.payload._id].special
             const oldCount = state.dice[action.payload._id].count
             const newCount = state.rollResult[special] - oldCount
-            return { ...state, dice: state.dice.map(d => d._id === action.payload._id ? action.payload : d), 
-                rollResult: { ...state.rollResult, [special]: state.dice[action.payload._id].count+newCount, [action.payload.special]: newCount + action.payload.count}, 
-                rollCounter: ++state.rollCounter }
+            return { ...state, 
+                dice: state.dice.map(d => d._id === action.payload._id ? action.payload : d), 
+                rollResult: { ...state.rollResult, [special]: state.dice[action.payload._id].count+newCount, [action.payload.special]:  +action.payload.count}, 
+                rollCounter: ++state.rollCounter 
+            }
         case DiceActionTypes.SET_DICES_COUNT:
             return {
                 ...state, dice: state.dice.map(d => {
