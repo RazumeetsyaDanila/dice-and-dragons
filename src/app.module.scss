@@ -6,81 +6,12 @@
     height: 100vh;
 }
 
-.diceContainer{
-    display: flex;
-    height: 75px;
-}
-
-.dicesContainer{
-    height: 150px;
-    width: 500px;
-    // border: #1D3557 2px solid;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 6px;
-
-}
-
-.rollBtn{
-    width: 104px;
-    height: 40px;
-    background-color: #1D3557;
-    color: #dfdfdf;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    user-select: none;
-    border-radius: 4px;
-    // margin-bottom: 20px;
-    &:hover{
-        cursor: pointer;
-        // background-color: #2b4f81
-        background-color: #1f406d
-    }
-}
-
-.rollResult{
-    color: #1D3557;
-    border: #1D3557 2px solid;
-    padding: 4px;
-    // background-color: #c7c7c7;
-    background-color: #669bbc;
-    user-select: none;
-    width: 108px;
-    border-radius: 6px;
-}
-
-.countSpan{
-    color: darkred;
-}
-
-.rollImgBtn{
-    width: 70px;
-    height: 70px;
-    &:hover{
-        width: 72px;
-        height: 72px;
-        cursor: pointer;        
-    }
-    &:hover path{
-        fill:#1f406d;
-    }
-}
-.rollImgBtnContainer{
-    height: 74px;
-    margin-top: 10px;
-}
-
-//------------ Подложка -------------
-
 .header{
     width: 500px;
     height: 35px;
     background-color: #1D3557;
     margin-bottom: 16px;
-    border-radius: 4px;
+    border-radius: 6px;
     color: #dfdfdf;
     font-size: 18px;
     display: flex;
@@ -89,24 +20,20 @@
     user-select: none;
 }
 
-.footer{
-    width: 500px;
-    height: 200px;
-    margin-top: 6px;
-    border: #1D3557 2px solid;
-    padding: 4px;
-    background-color: #669bbc;
-    border-radius: 0px 0px 6px 6px;
+.diceContainer{
     display: flex;
-    justify-content: center;
+    height: 75px;
+    margin-top: 14px;
+    margin-bottom: 14px;
 }
 
-.podlozhka{
+.battlefield{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.kvadrat{
+
+.dicesContainer{
     width: 500px;
     height: 100px;
     background-color: #669bbc;
@@ -116,6 +43,7 @@
     border: 2px solid #1D3557;
     border-radius: 6px 6px 0 0;
 }
+
 .circle{
     width: 140px;
     height: 70px;
@@ -139,13 +67,90 @@
     line-height: 0px;
 }
 
-.dragon_circle_knight{
+.dragonCircleKnightContainer{
     display: flex;
     align-items: flex-end;
 }
 
-.result_circle{
+.resultAndCircleContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.footer{
+    width: 500px;
+    height: 200px;
+    margin-top: 6px;
+    border: #1D3557 2px solid;
+    padding: 4px;
+    background-color: #669bbc;
+    border-radius: 0px 0px 6px 6px;
+    display: flex;
+    justify-content: center;
+}
+/*-------------------------------------*/
+.dragonContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1D3557;
+}
+
+.dragonLifebarContainer{
+    height: 10px;
+    width: 120px;
+    margin-bottom: 10px;
+    border: 1px solid #1D3557;
+}
+
+.dragonLifebarFill{
+    height: 8px;
+    background-color: #1D3557;
+    width: 80%;
+}
+
+.knightContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1D3557;
+}
+
+.knightLifebarContainer{
+    height: 10px;
+    width: 120px;
+    margin-bottom: 10px;
+    border: 1px solid #1D3557;
+}
+
+.knightLifebarFill{
+    height: 8px;
+    background-color: #1D3557;
+    width: 90%;
+}
+
+.openingSpeech{
+    color: #1D3557;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.startGamebtn{
+    width: 120px;
+    height: 30px;
+    background-color: #1D3557;
+    color: #dfdfdf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-top: 10px;
+
+    &:hover{
+        cursor: pointer;
+        background-color: #254572;
+    }
 }

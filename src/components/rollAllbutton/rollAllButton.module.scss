@@ -1,0 +1,16 @@
+.rollImgBtn{
+    width: 70px;
+    height: 70px;
+    &:hover{
+        width: 72px;
+        height: 72px;
+        cursor: pointer;        
+    }
+    &:hover path{
+        fill:#1f406d;
+    }
+}
+.rollImgBtnContainer{
+    height: 74px;
+    margin-top: 10px;
+}
