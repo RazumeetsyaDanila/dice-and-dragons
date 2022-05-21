@@ -18,27 +18,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className={classes.container}>
-        {allRollingsEnd ?
-          <div className={classes.rollResult}>
-            <p>Attack: {rollResult.attack ? <span className={classes.countSpan}>{rollResult.attack}</span> : 0}</p>
-            <p>Life: {rollResult.life ? <span className={classes.countSpan}>{rollResult.life}</span> : 0}</p>
-            <p>Coin: {rollResult.coin ? <span className={classes.countSpan}>{rollResult.coin}</span> : 0}</p>
-            <p>Shield: {rollResult.shield ? <span className={classes.countSpan}>{rollResult.shield}</span> : 0}</p>
-            <p>Roar: {rollResult.roar ? <span className={classes.countSpan}>{rollResult.roar}</span> : 0}</p>
-            <p>Magic: {rollResult.magic ? <span className={classes.countSpan}>{rollResult.magic}</span> : 0}</p>
-            <p>Numeral: {rollResult.numeral ? <span className={classes.countSpan}>{rollResult.numeral}</span> : 0}</p>
-          </div>
-          :
-          <div className={classes.rollResult}>
-            <p>Attack: ?</p>
-            <p>Life: ?</p>
-            <p>Coin: ?</p>
-            <p>Shield: ?</p>
-            <p>Roar: ?</p>
-            <p>Magic: ?</p>
-            <p>Numeral: ?</p>
-          </div>
-        }
+
         {/* дракон */}
 
         {/* <img src={dragonImg} alt="..." /> */}
@@ -48,7 +28,32 @@ function App() {
         <div className={classes.podlozhka}>
           <div className={classes.dragon_circle_knight}>
             <img src={DragonKnight1} alt="..." />
-            <div className={classes.circle}></div>
+            <div className={classes.result_circle}>
+              {allRollingsEnd ?
+                <div className={classes.rollResult}>
+                  <p>Attack: {rollResult.attack ? <span className={classes.countSpan}>{rollResult.attack}</span> : 0}</p>
+                  <p>Life: {rollResult.life ? <span className={classes.countSpan}>{rollResult.life}</span> : 0}</p>
+                  <p>Coin: {rollResult.coin ? <span className={classes.countSpan}>{rollResult.coin}</span> : 0}</p>
+                  <p>Shield: {rollResult.shield ? <span className={classes.countSpan}>{rollResult.shield}</span> : 0}</p>
+                  <p>Roar: {rollResult.roar ? <span className={classes.countSpan}>{rollResult.roar}</span> : 0}</p>
+                  <p>Magic: {rollResult.magic ? <span className={classes.countSpan}>{rollResult.magic}</span> : 0}</p>
+                  {/* <p>Numeral: {rollResult.numeral ? <span className={classes.countSpan}>{rollResult.numeral}</span> : 0}</p> */}
+                </div>
+                :
+                <div className={classes.rollResult}>
+                  <p>Attack: ?</p>
+                  <p>Life: ?</p>
+                  <p>Coin: ?</p>
+                  <p>Shield: ?</p>
+                  <p>Roar: ?</p>
+                  <p>Magic: ?</p>
+                  {/* <p>Numeral: ?</p> */}
+                </div>
+              }
+              <div className={classes.circle}>
+                <p>{rollResult.numeral && allRollingsEnd ? <span className={classes.countSpanCircle}>{rollResult.numeral}</span> : <span className={classes.countSpanCircle}>?</span>}</p>
+              </div>
+            </div>
             <img src={DragonKnight2} alt="..." />
           </div>
 

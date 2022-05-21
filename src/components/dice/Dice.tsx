@@ -46,8 +46,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(173,160)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M128 58c-32 0-64 16-64 37.838C64 154 96 142 96 142l-6 24h76l-6-24s32 12 32-52c0-16-32-32-64-32zm-26 38a16 16 0 0 1 16 16 16 16 0 0 1-16 16 16 16 0 0 1-16-16 16 16 0 0 1 16-16zm52 0a16 16 0 0 1 16 16 16 16 0 0 1-16 16 16 16 0 0 1-16-16 16 16 0 0 1 16-16zm-26 34l10 26h-20l10-26zm-28 51.002v17.996h56v-17.996h-56z"></path>
                                             </g>
                                         </g>
@@ -61,8 +61,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(173,160)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M103 63.52c-11.5 0-23 5-23 15 0 19.97 46 19.97 46 0 0-10-11.5-15-23-15zm50 35.78c-11.5 0-23 5-23 15 0 20 46 20 46 0 0-10-11.5-15-23-15zm-73 7.1v5.1c0 12.7 18.47 17.3 32 13.9v-11.1c0-1.2.1-2.4.2-3.6-10.9 1.8-22.76.4-32.2-4.3zm0 33v5.1c0 12.7 18.47 17.3 32 13.9v-14.6c-10.9 1.7-22.61.3-32-4.4zm50 2.8v5.1c0 20 46 20 46 0v-5.1c-13.7 6.8-32.3 6.8-46 0zm-50 30.2v2.1c0 13.3 20.2 17.7 33.8 13.4-1.2-3.2-1.8-6.7-1.8-10.6v-.5c-10.9 1.7-22.61.3-32-4.4zm50 2.8v2.1c0 20 46 20 46 0v-2.1c-13.7 6.8-32.3 6.8-46 0z"></path>
                                             </g>
                                         </g>
@@ -76,8 +76,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(173,160)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M128 204c16-24 68-78 68-94 0-24-20-39.824-36-40-16 0-32 10-32 30 0-20-16-30-32-30-16-.176-36 16-36 40 0 16 52 70 68 94z"></path>
                                             </g>
                                         </g>
@@ -91,8 +91,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(173,160)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M99.016 83.18c0 27.973 28.984 32.635 28.984 55.946 0 9.325-9.661 23.312-24.153 23.312-14.492 0-24.153-13.987-14.492-37.298-14.491 9.324-19.322 18.649-19.322 27.973 0 23.312 24.153 46.623 57.967 46.623 33.813 0 57.966-13.987 57.966-41.96.216-41.378-49.4-55.2-62.797-74.597-9.66-13.987-4.83-23.311 4.83-32.636-19.321 4.663-28.983 17.717-28.983 32.636z"></path>
                                             </g>
                                         </g>
@@ -106,8 +106,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(173,160)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M145.2 58.45c-8.3 12.4-10.3 22.35 2.5 21.1 10.4-1.02 7.2-10.11-2.5-21.1zm-38.3.55c-6.7 13.14-7.73 23.5 3.7 21.69 9.3-1.45 5.6-10.72-3.7-21.69zm69.7 17.45c-12.8 15.11-11.2 26.75-.4 27.95 11.6.3 11.8-12.14.4-27.95zm-99.87 4.9C68.85 95.5 68.37 106 79.88 105.2c14.04-1 8.37-11.54-3.15-23.85zm68.27 4.9c-17.5.72-15.7 37.15.8 36.55 16.3-.6 16.3-37.25-.8-36.55zm-33.6.59h-.7c-17.48 1.5-13.91 37.96 2.6 36.46 16.2-1.4 14.4-36.81-1.9-36.49zM85.34 112.9c-.52 0-.94.1-1.47.1-17.33 2.2-11.98 38.4 4.41 36.4 15.72-2 12.82-36.3-2.94-36.5zm87.36.5c-17.5-.4-18.3 36.2-1.6 36.5 16.3.3 18.8-36.2 1.6-36.5zm-45.4 21.1c-17.9.4-4.1 18.9-35.65 29.6-24.49 8.3-9.67 33.2 11.35 33.4 11.6.1 15.6-9 25-9 10.7.1 11.5 8.2 27.1 8.2 20.1.1 31.6-25 8.8-33.6-29.1-10.9-16.9-28.4-35.7-28.6z"></path>
                                             </g>
                                         </g>
@@ -121,8 +121,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(173,160)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M64 94l64-38 64 38c0 32-48 108-64 108-16 .25-64-76-64-108z"></path>
                                             </g>
                                         </g>
@@ -147,8 +147,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M128 58c-32 0-64 16-64 37.838C64 154 96 142 96 142l-6 24h76l-6-24s32 12 32-52c0-16-32-32-64-32zm-26 38a16 16 0 0 1 16 16 16 16 0 0 1-16 16 16 16 0 0 1-16-16 16 16 0 0 1 16-16zm52 0a16 16 0 0 1 16 16 16 16 0 0 1-16 16 16 16 0 0 1-16-16 16 16 0 0 1 16-16zm-26 34l10 26h-20l10-26zm-28 51.002v17.996h56v-17.996h-56z"></path>
                                             </g>
                                         </g>
@@ -162,8 +162,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(300,33)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M103 63.52c-11.5 0-23 5-23 15 0 19.97 46 19.97 46 0 0-10-11.5-15-23-15zm50 35.78c-11.5 0-23 5-23 15 0 20 46 20 46 0 0-10-11.5-15-23-15zm-73 7.1v5.1c0 12.7 18.47 17.3 32 13.9v-11.1c0-1.2.1-2.4.2-3.6-10.9 1.8-22.76.4-32.2-4.3zm0 33v5.1c0 12.7 18.47 17.3 32 13.9v-14.6c-10.9 1.7-22.61.3-32-4.4zm50 2.8v5.1c0 20 46 20 46 0v-5.1c-13.7 6.8-32.3 6.8-46 0zm-50 30.2v2.1c0 13.3 20.2 17.7 33.8 13.4-1.2-3.2-1.8-6.7-1.8-10.6v-.5c-10.9 1.7-22.61.3-32-4.4zm50 2.8v2.1c0 20 46 20 46 0v-2.1c-13.7 6.8-32.3 6.8-46 0z"></path>
                                             </g>
                                         </g>
@@ -177,8 +177,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M128 204c16-24 68-78 68-94 0-24-20-39.824-36-40-16 0-32 10-32 30 0-20-16-30-32-30-16-.176-36 16-36 40 0 16 52 70 68 94z"></path>
                                             </g>
                                         </g>
@@ -192,8 +192,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M99.016 83.18c0 27.973 28.984 32.635 28.984 55.946 0 9.325-9.661 23.312-24.153 23.312-14.492 0-24.153-13.987-14.492-37.298-14.491 9.324-19.322 18.649-19.322 27.973 0 23.312 24.153 46.623 57.967 46.623 33.813 0 57.966-13.987 57.966-41.96.216-41.378-49.4-55.2-62.797-74.597-9.66-13.987-4.83-23.311 4.83-32.636-19.321 4.663-28.983 17.717-28.983 32.636z"></path>
                                             </g>
                                         </g>
@@ -207,8 +207,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M145.2 58.45c-8.3 12.4-10.3 22.35 2.5 21.1 10.4-1.02 7.2-10.11-2.5-21.1zm-38.3.55c-6.7 13.14-7.73 23.5 3.7 21.69 9.3-1.45 5.6-10.72-3.7-21.69zm69.7 17.45c-12.8 15.11-11.2 26.75-.4 27.95 11.6.3 11.8-12.14.4-27.95zm-99.87 4.9C68.85 95.5 68.37 106 79.88 105.2c14.04-1 8.37-11.54-3.15-23.85zm68.27 4.9c-17.5.72-15.7 37.15.8 36.55 16.3-.6 16.3-37.25-.8-36.55zm-33.6.59h-.7c-17.48 1.5-13.91 37.96 2.6 36.46 16.2-1.4 14.4-36.81-1.9-36.49zM85.34 112.9c-.52 0-.94.1-1.47.1-17.33 2.2-11.98 38.4 4.41 36.4 15.72-2 12.82-36.3-2.94-36.5zm87.36.5c-17.5-.4-18.3 36.2-1.6 36.5 16.3.3 18.8-36.2 1.6-36.5zm-45.4 21.1c-17.9.4-4.1 18.9-35.65 29.6-24.49 8.3-9.67 33.2 11.35 33.4 11.6.1 15.6-9 25-9 10.7.1 11.5 8.2 27.1 8.2 20.1.1 31.6-25 8.8-33.6-29.1-10.9-16.9-28.4-35.7-28.6z"></path>
                                             </g>
                                         </g>
@@ -222,8 +222,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M64 94l64-38 64 38c0 32-48 108-64 108-16 .25-64-76-64-108z"></path>
                                             </g>
                                         </g>
@@ -248,8 +248,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M128 58c-32 0-64 16-64 37.838C64 154 96 142 96 142l-6 24h76l-6-24s32 12 32-52c0-16-32-32-64-32zm-26 38a16 16 0 0 1 16 16 16 16 0 0 1-16 16 16 16 0 0 1-16-16 16 16 0 0 1 16-16zm52 0a16 16 0 0 1 16 16 16 16 0 0 1-16 16 16 16 0 0 1-16-16 16 16 0 0 1 16-16zm-26 34l10 26h-20l10-26zm-28 51.002v17.996h56v-17.996h-56z"></path>
                                             </g>
                                         </g>
@@ -263,8 +263,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M103 63.52c-11.5 0-23 5-23 15 0 19.97 46 19.97 46 0 0-10-11.5-15-23-15zm50 35.78c-11.5 0-23 5-23 15 0 20 46 20 46 0 0-10-11.5-15-23-15zm-73 7.1v5.1c0 12.7 18.47 17.3 32 13.9v-11.1c0-1.2.1-2.4.2-3.6-10.9 1.8-22.76.4-32.2-4.3zm0 33v5.1c0 12.7 18.47 17.3 32 13.9v-14.6c-10.9 1.7-22.61.3-32-4.4zm50 2.8v5.1c0 20 46 20 46 0v-5.1c-13.7 6.8-32.3 6.8-46 0zm-50 30.2v2.1c0 13.3 20.2 17.7 33.8 13.4-1.2-3.2-1.8-6.7-1.8-10.6v-.5c-10.9 1.7-22.61.3-32-4.4zm50 2.8v2.1c0 20 46 20 46 0v-2.1c-13.7 6.8-32.3 6.8-46 0z"></path>
                                             </g>
                                         </g>
@@ -278,8 +278,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M128 204c16-24 68-78 68-94 0-24-20-39.824-36-40-16 0-32 10-32 30 0-20-16-30-32-30-16-.176-36 16-36 40 0 16 52 70 68 94z"></path>
                                             </g>
                                         </g>
@@ -293,8 +293,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(300,33)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M99.016 83.18c0 27.973 28.984 32.635 28.984 55.946 0 9.325-9.661 23.312-24.153 23.312-14.492 0-24.153-13.987-14.492-37.298-14.491 9.324-19.322 18.649-19.322 27.973 0 23.312 24.153 46.623 57.967 46.623 33.813 0 57.966-13.987 57.966-41.96.216-41.378-49.4-55.2-62.797-74.597-9.66-13.987-4.83-23.311 4.83-32.636-19.321 4.663-28.983 17.717-28.983 32.636z"></path>
                                             </g>
                                         </g>
@@ -308,8 +308,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M145.2 58.45c-8.3 12.4-10.3 22.35 2.5 21.1 10.4-1.02 7.2-10.11-2.5-21.1zm-38.3.55c-6.7 13.14-7.73 23.5 3.7 21.69 9.3-1.45 5.6-10.72-3.7-21.69zm69.7 17.45c-12.8 15.11-11.2 26.75-.4 27.95 11.6.3 11.8-12.14.4-27.95zm-99.87 4.9C68.85 95.5 68.37 106 79.88 105.2c14.04-1 8.37-11.54-3.15-23.85zm68.27 4.9c-17.5.72-15.7 37.15.8 36.55 16.3-.6 16.3-37.25-.8-36.55zm-33.6.59h-.7c-17.48 1.5-13.91 37.96 2.6 36.46 16.2-1.4 14.4-36.81-1.9-36.49zM85.34 112.9c-.52 0-.94.1-1.47.1-17.33 2.2-11.98 38.4 4.41 36.4 15.72-2 12.82-36.3-2.94-36.5zm87.36.5c-17.5-.4-18.3 36.2-1.6 36.5 16.3.3 18.8-36.2 1.6-36.5zm-45.4 21.1c-17.9.4-4.1 18.9-35.65 29.6-24.49 8.3-9.67 33.2 11.35 33.4 11.6.1 15.6-9 25-9 10.7.1 11.5 8.2 27.1 8.2 20.1.1 31.6-25 8.8-33.6-29.1-10.9-16.9-28.4-35.7-28.6z"></path>
                                             </g>
                                         </g>
@@ -323,8 +323,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M64 94l64-38 64 38c0 32-48 108-64 108-16 .25-64-76-64-108z"></path>
                                             </g>
                                         </g>
@@ -349,8 +349,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M128 58c-32 0-64 16-64 37.838C64 154 96 142 96 142l-6 24h76l-6-24s32 12 32-52c0-16-32-32-64-32zm-26 38a16 16 0 0 1 16 16 16 16 0 0 1-16 16 16 16 0 0 1-16-16 16 16 0 0 1 16-16zm52 0a16 16 0 0 1 16 16 16 16 0 0 1-16 16 16 16 0 0 1-16-16 16 16 0 0 1 16-16zm-26 34l10 26h-20l10-26zm-28 51.002v17.996h56v-17.996h-56z"></path>
                                             </g>
                                         </g>
@@ -364,8 +364,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M103 63.52c-11.5 0-23 5-23 15 0 19.97 46 19.97 46 0 0-10-11.5-15-23-15zm50 35.78c-11.5 0-23 5-23 15 0 20 46 20 46 0 0-10-11.5-15-23-15zm-73 7.1v5.1c0 12.7 18.47 17.3 32 13.9v-11.1c0-1.2.1-2.4.2-3.6-10.9 1.8-22.76.4-32.2-4.3zm0 33v5.1c0 12.7 18.47 17.3 32 13.9v-14.6c-10.9 1.7-22.61.3-32-4.4zm50 2.8v5.1c0 20 46 20 46 0v-5.1c-13.7 6.8-32.3 6.8-46 0zm-50 30.2v2.1c0 13.3 20.2 17.7 33.8 13.4-1.2-3.2-1.8-6.7-1.8-10.6v-.5c-10.9 1.7-22.61.3-32-4.4zm50 2.8v2.1c0 20 46 20 46 0v-2.1c-13.7 6.8-32.3 6.8-46 0z"></path>
                                             </g>
                                         </g>
@@ -379,8 +379,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(298,37)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M128 204c16-24 68-78 68-94 0-24-20-39.824-36-40-16 0-32 10-32 30 0-20-16-30-32-30-16-.176-36 16-36 40 0 16 52 70 68 94z"></path>
                                             </g>
                                         </g>
@@ -394,8 +394,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M99.016 83.18c0 27.973 28.984 32.635 28.984 55.946 0 9.325-9.661 23.312-24.153 23.312-14.492 0-24.153-13.987-14.492-37.298-14.491 9.324-19.322 18.649-19.322 27.973 0 23.312 24.153 46.623 57.967 46.623 33.813 0 57.966-13.987 57.966-41.96.216-41.378-49.4-55.2-62.797-74.597-9.66-13.987-4.83-23.311 4.83-32.636-19.321 4.663-28.983 17.717-28.983 32.636z"></path>
                                             </g>
                                         </g>
@@ -409,8 +409,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M145.2 58.45c-8.3 12.4-10.3 22.35 2.5 21.1 10.4-1.02 7.2-10.11-2.5-21.1zm-38.3.55c-6.7 13.14-7.73 23.5 3.7 21.69 9.3-1.45 5.6-10.72-3.7-21.69zm69.7 17.45c-12.8 15.11-11.2 26.75-.4 27.95 11.6.3 11.8-12.14.4-27.95zm-99.87 4.9C68.85 95.5 68.37 106 79.88 105.2c14.04-1 8.37-11.54-3.15-23.85zm68.27 4.9c-17.5.72-15.7 37.15.8 36.55 16.3-.6 16.3-37.25-.8-36.55zm-33.6.59h-.7c-17.48 1.5-13.91 37.96 2.6 36.46 16.2-1.4 14.4-36.81-1.9-36.49zM85.34 112.9c-.52 0-.94.1-1.47.1-17.33 2.2-11.98 38.4 4.41 36.4 15.72-2 12.82-36.3-2.94-36.5zm87.36.5c-17.5-.4-18.3 36.2-1.6 36.5 16.3.3 18.8-36.2 1.6-36.5zm-45.4 21.1c-17.9.4-4.1 18.9-35.65 29.6-24.49 8.3-9.67 33.2 11.35 33.4 11.6.1 15.6-9 25-9 10.7.1 11.5 8.2 27.1 8.2 20.1.1 31.6-25 8.8-33.6-29.1-10.9-16.9-28.4-35.7-28.6z"></path>
                                             </g>
                                         </g>
@@ -424,8 +424,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M64 94l64-38 64 38c0 32-48 108-64 108-16 .25-64-76-64-108z"></path>
                                             </g>
                                         </g>
@@ -450,8 +450,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M128 58c-32 0-64 16-64 37.838C64 154 96 142 96 142l-6 24h76l-6-24s32 12 32-52c0-16-32-32-64-32zm-26 38a16 16 0 0 1 16 16 16 16 0 0 1-16 16 16 16 0 0 1-16-16 16 16 0 0 1 16-16zm52 0a16 16 0 0 1 16 16 16 16 0 0 1-16 16 16 16 0 0 1-16-16 16 16 0 0 1 16-16zm-26 34l10 26h-20l10-26zm-28 51.002v17.996h56v-17.996h-56z"></path>
                                             </g>
                                         </g>
@@ -465,8 +465,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M103 63.52c-11.5 0-23 5-23 15 0 19.97 46 19.97 46 0 0-10-11.5-15-23-15zm50 35.78c-11.5 0-23 5-23 15 0 20 46 20 46 0 0-10-11.5-15-23-15zm-73 7.1v5.1c0 12.7 18.47 17.3 32 13.9v-11.1c0-1.2.1-2.4.2-3.6-10.9 1.8-22.76.4-32.2-4.3zm0 33v5.1c0 12.7 18.47 17.3 32 13.9v-14.6c-10.9 1.7-22.61.3-32-4.4zm50 2.8v5.1c0 20 46 20 46 0v-5.1c-13.7 6.8-32.3 6.8-46 0zm-50 30.2v2.1c0 13.3 20.2 17.7 33.8 13.4-1.2-3.2-1.8-6.7-1.8-10.6v-.5c-10.9 1.7-22.61.3-32-4.4zm50 2.8v2.1c0 20 46 20 46 0v-2.1c-13.7 6.8-32.3 6.8-46 0z"></path>
                                             </g>
                                         </g>
@@ -480,8 +480,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M128 204c16-24 68-78 68-94 0-24-20-39.824-36-40-16 0-32 10-32 30 0-20-16-30-32-30-16-.176-36 16-36 40 0 16 52 70 68 94z"></path>
                                             </g>
                                         </g>
@@ -495,8 +495,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M99.016 83.18c0 27.973 28.984 32.635 28.984 55.946 0 9.325-9.661 23.312-24.153 23.312-14.492 0-24.153-13.987-14.492-37.298-14.491 9.324-19.322 18.649-19.322 27.973 0 23.312 24.153 46.623 57.967 46.623 33.813 0 57.966-13.987 57.966-41.96.216-41.378-49.4-55.2-62.797-74.597-9.66-13.987-4.83-23.311 4.83-32.636-19.321 4.663-28.983 17.717-28.983 32.636z"></path>
                                             </g>
                                         </g>
@@ -510,8 +510,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M145.2 58.45c-8.3 12.4-10.3 22.35 2.5 21.1 10.4-1.02 7.2-10.11-2.5-21.1zm-38.3.55c-6.7 13.14-7.73 23.5 3.7 21.69 9.3-1.45 5.6-10.72-3.7-21.69zm69.7 17.45c-12.8 15.11-11.2 26.75-.4 27.95 11.6.3 11.8-12.14.4-27.95zm-99.87 4.9C68.85 95.5 68.37 106 79.88 105.2c14.04-1 8.37-11.54-3.15-23.85zm68.27 4.9c-17.5.72-15.7 37.15.8 36.55 16.3-.6 16.3-37.25-.8-36.55zm-33.6.59h-.7c-17.48 1.5-13.91 37.96 2.6 36.46 16.2-1.4 14.4-36.81-1.9-36.49zM85.34 112.9c-.52 0-.94.1-1.47.1-17.33 2.2-11.98 38.4 4.41 36.4 15.72-2 12.82-36.3-2.94-36.5zm87.36.5c-17.5-.4-18.3 36.2-1.6 36.5 16.3.3 18.8-36.2 1.6-36.5zm-45.4 21.1c-17.9.4-4.1 18.9-35.65 29.6-24.49 8.3-9.67 33.2 11.35 33.4 11.6.1 15.6-9 25-9 10.7.1 11.5 8.2 27.1 8.2 20.1.1 31.6-25 8.8-33.6-29.1-10.9-16.9-28.4-35.7-28.6z"></path>
                                             </g>
                                         </g>
@@ -525,8 +525,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M64 94l64-38 64 38c0 32-48 108-64 108-16 .25-64-76-64-108z"></path>
                                             </g>
                                         </g>
@@ -551,8 +551,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M128 58c-32 0-64 16-64 37.838C64 154 96 142 96 142l-6 24h76l-6-24s32 12 32-52c0-16-32-32-64-32zm-26 38a16 16 0 0 1 16 16 16 16 0 0 1-16 16 16 16 0 0 1-16-16 16 16 0 0 1 16-16zm52 0a16 16 0 0 1 16 16 16 16 0 0 1-16 16 16 16 0 0 1-16-16 16 16 0 0 1 16-16zm-26 34l10 26h-20l10-26zm-28 51.002v17.996h56v-17.996h-56z"></path>
                                             </g>
                                         </g>
@@ -566,8 +566,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M103 63.52c-11.5 0-23 5-23 15 0 19.97 46 19.97 46 0 0-10-11.5-15-23-15zm50 35.78c-11.5 0-23 5-23 15 0 20 46 20 46 0 0-10-11.5-15-23-15zm-73 7.1v5.1c0 12.7 18.47 17.3 32 13.9v-11.1c0-1.2.1-2.4.2-3.6-10.9 1.8-22.76.4-32.2-4.3zm0 33v5.1c0 12.7 18.47 17.3 32 13.9v-14.6c-10.9 1.7-22.61.3-32-4.4zm50 2.8v5.1c0 20 46 20 46 0v-5.1c-13.7 6.8-32.3 6.8-46 0zm-50 30.2v2.1c0 13.3 20.2 17.7 33.8 13.4-1.2-3.2-1.8-6.7-1.8-10.6v-.5c-10.9 1.7-22.61.3-32-4.4zm50 2.8v2.1c0 20 46 20 46 0v-2.1c-13.7 6.8-32.3 6.8-46 0z"></path>
                                             </g>
                                         </g>
@@ -581,8 +581,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M128 204c16-24 68-78 68-94 0-24-20-39.824-36-40-16 0-32 10-32 30 0-20-16-30-32-30-16-.176-36 16-36 40 0 16 52 70 68 94z"></path>
                                             </g>
                                         </g>
@@ -596,8 +596,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M99.016 83.18c0 27.973 28.984 32.635 28.984 55.946 0 9.325-9.661 23.312-24.153 23.312-14.492 0-24.153-13.987-14.492-37.298-14.491 9.324-19.322 18.649-19.322 27.973 0 23.312 24.153 46.623 57.967 46.623 33.813 0 57.966-13.987 57.966-41.96.216-41.378-49.4-55.2-62.797-74.597-9.66-13.987-4.83-23.311 4.83-32.636-19.321 4.663-28.983 17.717-28.983 32.636z"></path>
                                             </g>
                                         </g>
@@ -611,8 +611,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M145.2 58.45c-8.3 12.4-10.3 22.35 2.5 21.1 10.4-1.02 7.2-10.11-2.5-21.1zm-38.3.55c-6.7 13.14-7.73 23.5 3.7 21.69 9.3-1.45 5.6-10.72-3.7-21.69zm69.7 17.45c-12.8 15.11-11.2 26.75-.4 27.95 11.6.3 11.8-12.14.4-27.95zm-99.87 4.9C68.85 95.5 68.37 106 79.88 105.2c14.04-1 8.37-11.54-3.15-23.85zm68.27 4.9c-17.5.72-15.7 37.15.8 36.55 16.3-.6 16.3-37.25-.8-36.55zm-33.6.59h-.7c-17.48 1.5-13.91 37.96 2.6 36.46 16.2-1.4 14.4-36.81-1.9-36.49zM85.34 112.9c-.52 0-.94.1-1.47.1-17.33 2.2-11.98 38.4 4.41 36.4 15.72-2 12.82-36.3-2.94-36.5zm87.36.5c-17.5-.4-18.3 36.2-1.6 36.5 16.3.3 18.8-36.2 1.6-36.5zm-45.4 21.1c-17.9.4-4.1 18.9-35.65 29.6-24.49 8.3-9.67 33.2 11.35 33.4 11.6.1 15.6-9 25-9 10.7.1 11.5 8.2 27.1 8.2 20.1.1 31.6-25 8.8-33.6-29.1-10.9-16.9-28.4-35.7-28.6z"></path>
                                             </g>
                                         </g>
@@ -626,8 +626,8 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
-                                                <circle cx="128" cy="128" r="128" fill="#c1121f" fillOpacity="1"></circle>
-                                                <circle stroke="#fff" strokeOpacity="1" fill="#c1121f" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
+                                                <circle cx="128" cy="128" r="128" fill="#8b0000" fillOpacity="1"></circle>
+                                                <circle stroke="#fff" strokeOpacity="1" fill="#8b0000" fillOpacity="1" strokeWidth="18" cx="128" cy="128" r="101"></circle>
                                                 <path className={classes.notChangeFill} fill="#fff" fillOpacity="1" d="M64 94l64-38 64 38c0 32-48 108-64 108-16 .25-64-76-64-108z"></path>
                                             </g>
                                         </g>
