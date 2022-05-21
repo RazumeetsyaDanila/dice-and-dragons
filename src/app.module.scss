@@ -48,7 +48,7 @@
     // background-color: #c7c7c7;
     background-color: #669bbc;
     user-select: none;
-    width: 104px;
+    width: 108px;
     border-radius: 6px;
 }
 
@@ -77,20 +77,21 @@
 
 .header{
     width: 500px;
-    height: 40px;
+    height: 35px;
     background-color: #1D3557;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     border-radius: 4px;
     color: #dfdfdf;
     font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
 .footer{
     width: 500px;
-    height: 250px;
+    height: 200px;
     margin-top: 6px;
     border: #1D3557 2px solid;
     padding: 4px;
@@ -116,7 +117,6 @@
     border-radius: 6px 6px 0 0;
 }
 .circle{
-    // margin-top: 20px;
     width: 140px;
     height: 70px;
     background-color: #669bbc;
@@ -129,6 +129,7 @@
     top: 3px;
     border: 2px solid #1D3557;
     border-bottom: 2px solid #669bbc;
+    user-select: none;
     
 }
 

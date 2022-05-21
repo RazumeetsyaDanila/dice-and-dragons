@@ -34,7 +34,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.oneDice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g  transform="translate(0,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                     </svg>
                                 case 'attack':
@@ -42,7 +42,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.attack1Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(173,160)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -57,7 +57,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.coin1Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(173,160)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -72,7 +72,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.life1Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(173,160)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -87,7 +87,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.magic1Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(173,160)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -102,7 +102,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.roar1Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(173,160)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -117,7 +117,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.shield1Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(173,160)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -135,7 +135,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.shield1Dice}
                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <g transform="translate(0,0)">
-                                        <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                        <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                     </g>
                                 </svg>
                                 case 'attack':
@@ -143,7 +143,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.attack2Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -158,7 +158,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.coin2Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(300,33)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -173,7 +173,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.life2Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -188,7 +188,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.magic2Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -203,7 +203,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.roar2Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -218,7 +218,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.shield2Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -236,7 +236,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.threeDice}
                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <g transform="translate(0,0)">
-                                        <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                        <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                     </g>
                                 </svg>
                                 case 'attack':
@@ -244,7 +244,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.attack3Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -259,7 +259,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.coin3Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -274,7 +274,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.life3Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -289,7 +289,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.magic3Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(300,33)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -304,7 +304,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.roar3Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -319,7 +319,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.shield3Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm316.97 36.03A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -337,7 +337,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.fourDice}
                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <g transform="translate(0,0)">
-                                        <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                        <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                     </g>
                                 </svg>
                                 case 'attack':
@@ -345,7 +345,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.attack4Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -360,7 +360,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.coin4Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -375,7 +375,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.life4Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(298,37)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -390,7 +390,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.magic4Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -405,7 +405,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.roar4Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -420,7 +420,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.shield4Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm-268 268A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -438,7 +438,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.fiveDice}
                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">    
                                     <g transform="translate(0,0)">
-                                        <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                        <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                     </g>
                                 </svg>
                                 case 'attack':
@@ -446,7 +446,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.attack5Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -461,7 +461,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.coin5Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -476,7 +476,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.life5Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -491,7 +491,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.magic5Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -506,7 +506,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.roar5Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -521,7 +521,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.shield5Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM256 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -539,7 +539,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.sixDice}
                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <g transform="translate(0,0)">
-                                        <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM122 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zm268 0a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                        <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM122 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zm268 0a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                     </g>
                                 </svg>
                                 case 'attack':
@@ -547,7 +547,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.attack6Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM122 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zm268 0a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM122 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zm268 0a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -562,7 +562,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.coin6Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM122 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zm268 0a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM122 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zm268 0a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -577,7 +577,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.life6Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM122 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zm268 0a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM122 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zm268 0a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -592,7 +592,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.magic6Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM122 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zm268 0a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM122 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zm268 0a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -607,7 +607,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.roar6Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM122 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zm268 0a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM122 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zm268 0a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">
@@ -622,7 +622,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
                                     return <svg onClick={() => setDice(diceId)} className={classes.shield6Dice}
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <g transform="translate(1,0)">
-                                            <path stroke="darkred" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM122 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zm268 0a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
+                                            <path stroke="#0b1d36" strokeOpacity="1" strokeWidth="15" d="M74.5 36A38.5 38.5 0 0 0 36 74.5v363A38.5 38.5 0 0 0 74.5 476h363a38.5 38.5 0 0 0 38.5-38.5v-363A38.5 38.5 0 0 0 437.5 36h-363zm48.97 36.03A50 50 0 0 1 172 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 122a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zM122 206a50 50 0 0 1 0 100 50 50 0 0 1 0-100zm268 0a50 50 0 0 1 0 100 50 50 0 0 1 0-100zM123.47 340.03A50 50 0 0 1 172 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97zm268 0A50 50 0 0 1 440 390a50 50 0 0 1-100 0 50 50 0 0 1 51.47-49.97z" fill="#1d3557" fillOpacity="1"></path>
                                         </g>
                                         <g transform="translate(301,32)">
                                             <g transform="translate(12.8, 12.8) scale(0.6, 0.6) rotate(0, 128, 128)">

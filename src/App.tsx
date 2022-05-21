@@ -5,8 +5,6 @@ import Dice from './components/dice/Dice';
 import { useActions } from './hooks/useActions';
 import classes from './app.module.scss'
 import { useTypedSelector } from './hooks/useTypedSelector';
-import dragonImg from './img/dragons/Dragon.svg';
-import dragonKnightImg from './img/dragons/DragonKnight.svg';
 import DragonKnight1 from './img/dragons/DragonKnight1.svg';
 import DragonKnight2 from './img/dragons/DragonKnight2.svg';
 
@@ -19,10 +17,6 @@ function App() {
     <BrowserRouter>
       <div className={classes.container}>
 
-        {/* дракон */}
-
-        {/* <img src={dragonImg} alt="..." /> */}
-        {/* <img src={dragonKnightImg} alt="..." /> */}
         <div className={classes.header}>
           <p>1 ход</p>
         </div>
@@ -31,6 +25,7 @@ function App() {
           <div className={classes.dragon_circle_knight}>
             <img src={DragonKnight1} alt="..." />
             <div className={classes.result_circle}>
+              {/* Результаты по спец кубикам (компонент) */}
               {allRollingsEnd ?
                 <div className={classes.rollResult}>
                   <p>Атака: {rollResult.attack ? <span className={classes.countSpan}>{rollResult.attack}</span> : 0}</p>
@@ -39,7 +34,6 @@ function App() {
                   <p>Броня: {rollResult.shield ? <span className={classes.countSpan}>{rollResult.shield}</span> : 0}</p>
                   <p>Рёв: {rollResult.roar ? <span className={classes.countSpan}>{rollResult.roar}</span> : 0}</p>
                   <p>Магия: {rollResult.magic ? <span className={classes.countSpan}>{rollResult.magic}</span> : 0}</p>
-                  {/* <p>Numeral: {rollResult.numeral ? <span className={classes.countSpan}>{rollResult.numeral}</span> : 0}</p> */}
                 </div>
                 :
                 <div className={classes.rollResult}>
@@ -49,10 +43,9 @@ function App() {
                   <p>Броня: ?</p>
                   <p>Рёв: ?</p>
                   <p>Магия: ?</p>
-                  {/* <p>Numeral: ?</p> */}
                 </div>
               }
-              {/* RollAllBtn */}
+              {/* RollAllBtn (компонент)*/}
               <div className={classes.rollImgBtnContainer}>
                 <svg className={classes.rollImgBtn} onClick={setDices}
                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -61,9 +54,9 @@ function App() {
                   </g>
                 </svg>
               </div>
-
+              {/* Счетчик броска */}
               <div className={classes.circle}>
-                <p>{rollResult.numeral && allRollingsEnd ? <span className={classes.countSpanCircle}>{rollResult.numeral}</span> : <span className={classes.countSpanCircle}>?</span>}</p>
+                <p>{allRollingsEnd ? <span className={classes.countSpanCircle}>{rollResult.numeral}</span> : <span className={classes.countSpanCircle}>?</span>}</p>
               </div>
 
             </div>
@@ -77,22 +70,17 @@ function App() {
                   dice.map(d => <Dice diceId={d._id} key={d._id} />)
                 }
               </div>
-
             </div>
           </div>
 
 
           <div className={classes.footer}>
-            {/* <div className={classes.rollBtn} onClick={setDices}> ROLL ALL </div> */}
-
 
           </div>
+
         </div>
 
       </div>
-
-
-
     </BrowserRouter>
   );
 }
