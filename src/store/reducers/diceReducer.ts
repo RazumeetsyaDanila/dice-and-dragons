@@ -29,7 +29,7 @@ export const dicesReducer = (state = DicesInitialState, action: IDiceAction): ID
             return {
                 ...state, dice: state.dice.map(d => {
                     return { ...d, rolling: true, count: action.payload.counts[d._id], special: action.payload.specials[d._id] }
-                }), rollResult: action.payload.rollResult, rollCounter: ++state.rollCounter
+                }), rollResult: action.payload.rollResult, rollCounter: ++state.rollCounter, actionType: action.payload.actionType
             }
         case DiceActionTypes.UNSET_DICE_ROLLING:
             return { ...state, dice: state.dice.map(d => d._id === action.payload ? { ...d, rolling: false } : d) }

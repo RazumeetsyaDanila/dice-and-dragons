@@ -15,6 +15,7 @@ export interface IDicesState {
     rollResult: {
         [key: string]: number
     },
+    actionType: string,
     rollCounter: number
 }
 
@@ -52,7 +53,8 @@ interface ISetDicesCountAction {
         specials: string[],
         rollResult: {
             [key: string]: number
-        }
+        },
+        actionType: string
     }
 }
 

@@ -83,11 +83,11 @@
     height: 200px;
     margin-top: 6px;
     border: #1D3557 2px solid;
-    padding: 4px;
+    padding: 8px;
     background-color: #669bbc;
     border-radius: 0px 0px 6px 6px;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
 }
 /*-------------------------------------*/
 .dragonContainer{
@@ -153,4 +153,55 @@
         cursor: pointer;
         background-color: #254572;
     }
+}
+
+.choiceContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#1D3557;
+    & p{
+        margin-bottom: 10px;
+    }
+}
+
+.choiceButtonContainer{
+    width: 128px;
+    height: 138px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.choiceButtonsContainer{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    height: 144px;
+}
+
+.choiceButton{
+    width: 120px;
+    height: 130px;
+    background-color: #254572;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #dfdfdf;
+    cursor: pointer;
+    &:hover{
+        background-color: #1D3557;
+        box-shadow: 4px 4px 2px 1px rgba(13, 13, 83, 0.2);
+        font-size: 17px;
+        width: 124px;
+        height: 134px;
+    }
+
+}
+
+.heroInfo{
+    display: flex;
+    flex-direction: column;
+    color: #1D3557;
 }

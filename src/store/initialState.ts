@@ -54,6 +54,7 @@ export const DicesInitialState: IDicesState = {
         shield: 0,
         numeral: 21
     },
+    actionType: '',
     rollCounter: 0
 }
 

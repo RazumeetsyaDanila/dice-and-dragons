@@ -18,7 +18,7 @@ export const setDice = (diceId: number) => {
     }
 }
 
-export const setDices = () => {
+export const setDices = (actionType: string) => {
     return (dispatch: Dispatch<IDiceAction>) => {
         const specialNames: string[] = ['attack', 'life', 'shield', 'roar', 'magic', 'coin', 'coin', 'coin', 'numeral', 'numeral', 'numeral', 'numeral']
         const counts: number[] = []
@@ -45,7 +45,7 @@ export const setDices = () => {
             rollResult[specials[i]] += counts[i]
         }
         try {
-            dispatch({ type: DiceActionTypes.SET_DICES_COUNT, payload: {counts: counts, specials: specials, rollResult: rollResult} })
+            dispatch({ type: DiceActionTypes.SET_DICES_COUNT, payload: {counts: counts, specials: specials, rollResult: rollResult, actionType: actionType} })
         } catch (e) {
             console.log("ba");
         }

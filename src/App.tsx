@@ -13,18 +13,40 @@ import Modal from './components/modal/Modal';
 
 function App() {
   const { setDices } = useActions()
-  const { dice, rollResult } = useTypedSelector(state => state.dices)
+  const { dice, rollResult, actionType } = useTypedSelector(state => state.dices)
   const allRollingsEnd = !dice[0].rolling && !dice[1].rolling && !dice[2].rolling && !dice[3].rolling && !dice[4].rolling && !dice[5].rolling
 
   const [actionModal, setActionModal] = useState(false)
   const [startGameModal, setStartGameModal] = useState(true)
 
+  const roll = (actionType: string) => {
+    setDices(actionType)
+    setActionModal(false)
+  }
+
   return (
     <BrowserRouter>
       <div className={classes.container}>
 
+        {/* <div className={classes.header}>
+          <p>1 ход {actionType ? <span>| {actionType}</span> : ''}</p>
+        </div> */}
+
         <div className={classes.header}>
-          <p>1 ход | Атака</p>
+          {
+            (() => {
+              switch(actionType){
+                case 'attack':
+                  return <span>1 ход | Атака</span>
+                case 'coin':
+                  return <span>1 ход | Монеты</span>
+                case 'life':
+                  return <span>1 ход | Лечение</span>
+                default:
+                  return <span>1 ход</span>
+              }
+            })()
+          }
         </div>
 
         <div className={classes.battlefield}>
@@ -38,7 +60,7 @@ function App() {
             </div>
             <div className={classes.resultAndCircleContainer}>
               <SpecialResult />
-              <RollAllButton />
+              <RollAllButton setActionModal={setActionModal} />
               {/* Счетчик броска в полукруге */}
               <div className={classes.circle}>
                 <p>{allRollingsEnd ? <span className={classes.countSpanCircle}>{rollResult.numeral}</span> : <span className={classes.countSpanCircle}>?</span>}</p>
@@ -63,8 +85,22 @@ function App() {
           </div>
 
           <div className={classes.footer}>
+            <div className={classes.heroInfo}>
+              <p>Базовый урон:</p>
+              <p>Монеты:</p>
+            </div>
+
+
             <Modal visible={actionModal} setVisible={setActionModal}>
-              <div>
+              <div className={classes.choiceContainer}>
+                <p>Выберите действие:</p>
+                <div className={classes.choiceButtonsContainer}>
+                  <div className={classes.choiceButtonContainer}><div className={classes.choiceButton} onClick={() => roll('attack')}>Атака</div></div>
+                  <div className={classes.choiceButtonContainer}><div className={classes.choiceButton} onClick={() => roll('life')}>Лечение</div></div>
+                  <div className={classes.choiceButtonContainer}><div className={classes.choiceButton} onClick={() => roll('coin')}>Монеты</div></div>
+                  
+                </div>
+
               </div>
             </Modal>
 
