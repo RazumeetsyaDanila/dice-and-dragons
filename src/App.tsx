@@ -11,6 +11,7 @@ import RollAllButton from './components/rollAllbutton/RollAllButton';
 import SpecialResult from './components/specialResult/SpecialResult';
 import Modal from './components/modal/Modal';
 import ChoiceBox from './components/choiceBox/ChoiceBox';
+import { coinsSvg_d, choiceAttackSvg_d } from './img/svg/svgImages'
 
 function App() {
   const { setDices } = useActions()
@@ -84,15 +85,33 @@ function App() {
 
           <div className={classes.footer}>
             <div className={classes.heroInfo}>
-              <p>Базовый урон:</p>
-              <p>Монеты:</p>
+              <div className={classes.walletAttackContainer}>
+                <div className={classes.walletContainer}>
+                  <svg width="50px" height="50px" version="1.1" viewBox="0 0 60 60" >
+                    <path fill="#1d3557" d={coinsSvg_d} />
+                  </svg>
+                  <p>55</p>
+                </div>
+                <div className={classes.attackContainer}>
+                  <svg width="50px" height="50px" version="1.1" viewBox="0 0 512 512" >
+                    <path fill="#1d3557" d={choiceAttackSvg_d} />
+                  </svg>
+                  <p>10</p>
+                </div>
+
+
+              </div>
+              <p>Повышение базового урона</p>
+              <p>Перебросить кубики</p>
+              <p>Перевыбрать действие</p>
+              <p>Выпить лечебное зелье</p>
             </div>
 
             {/* Окно выбора действия */}
             <Modal visible={actionModal} setVisible={setActionModal}>
               <ChoiceBox roll={roll} />
             </Modal>
-            
+
             {/* Стартовое окно */}
             <Modal visible={startGameModal} setVisible={setStartGameModal}>
               <div className={classes.openingSpeech}>

@@ -3,18 +3,22 @@ import { DiceActionTypes, IDiceAction } from '../../types/diceType';
 
 export const setDice = (diceId: number) => {
     return (dispatch: Dispatch<IDiceAction>) => {
-        const specialNames: string[] = ['attack', 'life', 'shield', 'roar', 'magic', 'coin', 'coin', 'coin', 'numeral', 'numeral', 'numeral', 'numeral']
-        const newDice = {
-            _id: diceId,
-            count: Math.floor(Math.random() * 6) + 1,
-            rolling: true,
-            special: specialNames[Math.floor(Math.random() * 12)]
+        const test = true
+        if(test){
+            const specialNames: string[] = ['attack', 'life', 'shield', 'roar', 'magic', 'coin', 'coin', 'coin', 'numeral', 'numeral', 'numeral', 'numeral']
+            const newDice = {
+                _id: diceId,
+                count: Math.floor(Math.random() * 6) + 1,
+                rolling: true,
+                special: specialNames[Math.floor(Math.random() * 12)]
+            }
+            try {
+                dispatch({ type: DiceActionTypes.SET_DICE_COUNT, payload: newDice })
+            } catch (e) {
+                console.log("ba");
+            }
         }
-        try {
-            dispatch({ type: DiceActionTypes.SET_DICE_COUNT, payload: newDice })
-        } catch (e) {
-            console.log("ba");
-        }
+        
     }
 }
 
