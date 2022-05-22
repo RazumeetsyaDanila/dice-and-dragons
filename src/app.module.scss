@@ -155,51 +155,6 @@
     }
 }
 
-.choiceContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color:#1D3557;
-    & p{
-        margin-bottom: 10px;
-    }
-}
-
-.choiceButtonContainer{
-    width: 128px;
-    height: 138px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.choiceButtonsContainer{
-    display: flex;    
-    justify-content: center;
-    align-items: center;
-    height: 144px;
-}
-
-.choiceButton{
-    width: 120px;
-    height: 130px;
-    background-color: #254572;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #dfdfdf;
-    cursor: pointer;
-    &:hover{
-        background-color: #1D3557;
-        box-shadow: 4px 4px 2px 1px rgba(13, 13, 83, 0.2);
-        font-size: 17px;
-        width: 124px;
-        height: 134px;
-    }
-
-}
-
 .heroInfo{
     display: flex;
     flex-direction: column;

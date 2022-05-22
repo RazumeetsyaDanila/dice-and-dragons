@@ -1,0 +1,79 @@
+.choiceContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#1D3557;
+    & p{
+        margin-bottom: 10px;
+    }
+}
+
+.choiceButtonContainer{
+    width: 128px;
+    height: 138px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.choiceButtonsContainer{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    height: 144px;
+}
+
+%choiceButton{
+    width: 120px;
+    height: 130px;
+    background-color: #254572;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #dfdfdf;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    &:hover{
+        background-color: #1D3557;
+        box-shadow: 4px 4px 2px 1px rgba(13, 13, 83, 0.2);
+        font-size: 17px;
+        width: 124px;
+        height: 134px;
+    }
+}
+
+.choiceAttackButton{
+    @extend %choiceButton;
+    &:hover .choiceButtonAttackFill{
+        fill: #dfdfdf;
+    }
+}
+
+.choiceCoinButton{
+    @extend %choiceButton;
+    &:hover .choiceButtonCoinFill{
+        fill: #dfdfdf;
+    }
+}
+
+.choiceLifeButton{
+    @extend %choiceButton;
+    &:hover .choiceButtonLifeFill{
+        fill: #dfdfdf;
+    }
+}
+
+
+.choiceButtonAttackImg{
+    margin-bottom: 6px;
+}
+
+.choiceButtonCoinImg{
+    margin-bottom: 6px;
+}
+
+.choiceButtonLifeImg{
+    margin-bottom: 6px;
+}

@@ -10,6 +10,7 @@ import Knight from './img/dragons/DragonKnight2.svg';
 import RollAllButton from './components/rollAllbutton/RollAllButton';
 import SpecialResult from './components/specialResult/SpecialResult';
 import Modal from './components/modal/Modal';
+import ChoiceBox from './components/choiceBox/ChoiceBox';
 
 function App() {
   const { setDices } = useActions()
@@ -28,14 +29,11 @@ function App() {
     <BrowserRouter>
       <div className={classes.container}>
 
-        {/* <div className={classes.header}>
-          <p>1 ход {actionType ? <span>| {actionType}</span> : ''}</p>
-        </div> */}
-
+        {/* Шапка (компонент) */}
         <div className={classes.header}>
           {
             (() => {
-              switch(actionType){
+              switch (actionType) {
                 case 'attack':
                   return <span>1 ход | Атака</span>
                 case 'coin':
@@ -90,20 +88,12 @@ function App() {
               <p>Монеты:</p>
             </div>
 
-
+            {/* Окно выбора действия */}
             <Modal visible={actionModal} setVisible={setActionModal}>
-              <div className={classes.choiceContainer}>
-                <p>Выберите действие:</p>
-                <div className={classes.choiceButtonsContainer}>
-                  <div className={classes.choiceButtonContainer}><div className={classes.choiceButton} onClick={() => roll('attack')}>Атака</div></div>
-                  <div className={classes.choiceButtonContainer}><div className={classes.choiceButton} onClick={() => roll('life')}>Лечение</div></div>
-                  <div className={classes.choiceButtonContainer}><div className={classes.choiceButton} onClick={() => roll('coin')}>Монеты</div></div>
-                  
-                </div>
-
-              </div>
+              <ChoiceBox roll={roll} />
             </Modal>
-
+            
+            {/* Стартовое окно */}
             <Modal visible={startGameModal} setVisible={setStartGameModal}>
               <div className={classes.openingSpeech}>
                 <p>Добро пожаловать!</p>
@@ -119,3 +109,6 @@ function App() {
 }
 
 export default App;
+
+
+
