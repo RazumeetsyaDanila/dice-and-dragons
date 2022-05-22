@@ -12,7 +12,7 @@ export interface IKnightState {
 
 export interface IGameState {
     stepCount: number,
-    stage: string
+    stage: string //waiting, thrown,  end
 }
 
 export enum GameActionTypes {

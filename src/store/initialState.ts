@@ -54,7 +54,7 @@ export const DicesInitialState: IDicesState = {
 
 export const GameInitialState: IGameState = {
     stepCount: 1,
-    stage: ''
+    stage: 'waiting'
 }
 
 export const DragonInitialState: IDragonState = {
