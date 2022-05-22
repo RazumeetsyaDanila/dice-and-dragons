@@ -1,9 +1,9 @@
 .rollImgBtn{
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     &:hover{
-        width: 72px;
-        height: 72px;
+        width: 77px;
+        height: 77px;
         cursor: pointer;        
     }
     &:hover path{
@@ -11,6 +11,7 @@
     }
 }
 .rollImgBtnContainer{
-    height: 74px;
-    margin-top: 10px;
+    height: 75px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }

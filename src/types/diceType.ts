@@ -1,10 +1,3 @@
-export interface IDiceState {
-    counts: number[],
-    rolling: boolean[],
-    rollCounter: number,
-    specials: string[]
-}
-
 export interface IDicesState {
     dice: {
         _id: number,
@@ -18,16 +11,6 @@ export interface IDicesState {
     actionType: string,
     rollCounter: number
 }
-
-export interface IHeroState {
-    health: number;
-    armor: number;
-    physicalDamage: number;
-    magicDamage: number;
-    wallet: number
-}
-
-
 
 export enum DiceActionTypes {
     SET_DICE_COUNT = 'SET_DICE_COUNT',
@@ -64,3 +47,10 @@ interface ISetDiceRollingAction {
 }
 
 export type IDiceAction = ISetDiceCountAction | ISetDiceRollingAction | ISetDicesCountAction
+
+// export interface IDiceState {
+//     counts: number[],
+//     rolling: boolean[],
+//     rollCounter: number,
+//     specials: string[]
+// }

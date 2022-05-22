@@ -1,11 +1,5 @@
-import { IDiceState, IHeroState, IDicesState } from '../types/diceType';
-
-export const DiceInitialState: IDiceState = {
-    counts: [1, 1, 1, 1, 1, 1],
-    rolling: [false, false, false, false, false, false],
-    rollCounter: 0,
-    specials: ['magic', 'magic', 'magic', 'magic', 'magic', 'magic']
-}
+import {  IDicesState } from '../types/diceType';
+import {  IGameState, IDragonState, IKnightState } from '../types/gameType';
 
 export const DicesInitialState: IDicesState = {
     dice: [{
@@ -58,10 +52,27 @@ export const DicesInitialState: IDicesState = {
     rollCounter: 0
 }
 
-export const HeroInitialState: IHeroState = {
-    health: 30,
-    armor: 10,
-    physicalDamage: 0,
-    magicDamage: 0,
-    wallet: 0
+export const GameInitialState: IGameState = {
+    stepCount: 1,
+    stage: ''
 }
+
+export const DragonInitialState: IDragonState = {
+    maxHealth: 200,
+    currentHealth: 200,
+    wallet: 0,
+    damage: 10
+}
+
+export const KnightInitialState: IKnightState = {
+    maxHealth: 200,
+    currentHealth: 200
+}
+
+
+// export const DiceInitialState: IDiceState = {
+//     counts: [1, 1, 1, 1, 1, 1],
+//     rolling: [false, false, false, false, false, false],
+//     rollCounter: 0,
+//     specials: ['magic', 'magic', 'magic', 'magic', 'magic', 'magic']
+// }
