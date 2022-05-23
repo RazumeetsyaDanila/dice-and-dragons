@@ -12,18 +12,37 @@ import SpecialResult from './components/specialResult/SpecialResult';
 import Modal from './components/modal/Modal';
 import ChoiceBox from './components/choiceBox/ChoiceBox';
 import { coinsSvg_d, choiceAttackSvg_d } from './img/svg/svgImages'
+import NextTurnButton from './components/nextTurnButton/NextTurnButton';
+import DragonLifebar from './components/dragonLifebar/DragonLifebar';
+import KnightLifebar from './components/knightLifebar/KnightLifebar';
 
 function App() {
-  const { setDices } = useActions()
+  const { setDices, nextTurn, nextStage, unsetAction, getCoin, dragonDamaged } = useActions()
   const { dice, rollResult, actionType } = useTypedSelector(state => state.dices)
+  const { dragon, knight, stepCount, stage } = useTypedSelector(state => state.game)
   const allRollingsEnd = !dice[0].rolling && !dice[1].rolling && !dice[2].rolling && !dice[3].rolling && !dice[4].rolling && !dice[5].rolling
 
   const [actionModal, setActionModal] = useState(false)
-  const [startGameModal, setStartGameModal] = useState(true)
+  const [startGameModal, setStartGameModal] = useState(false)
 
   const roll = (actionType: string) => {
     setDices(actionType)
     setActionModal(false)
+    nextStage('thrown')
+  }
+
+  const acceptRoll = () => {
+    switch (actionType) {
+      case 'coin':
+        getCoin(rollResult.coin * rollResult.numeral)
+        break
+      default:
+        break
+    }
+    setDices('')    
+    nextTurn()
+    nextStage('waiting')
+    dragonDamaged(rollResult.numeral * rollResult.attack)
   }
 
   return (
@@ -36,13 +55,13 @@ function App() {
             (() => {
               switch (actionType) {
                 case 'attack':
-                  return <span>1 ход | Атака</span>
+                  return <span>{stepCount} ход | Атака</span>
                 case 'coin':
-                  return <span>1 ход | Монеты</span>
+                  return <span>{stepCount} ход | Монеты</span>
                 case 'life':
-                  return <span>1 ход | Лечение</span>
+                  return <span>{stepCount} ход | Лечение</span>
                 default:
-                  return <span>1 ход</span>
+                  return <span>{stepCount} ход</span>
               }
             })()
           }
@@ -51,15 +70,20 @@ function App() {
         <div className={classes.battlefield}>
           <div className={classes.dragonCircleKnightContainer}>
             <div className={classes.dragonContainer}>
-              <p>160/200</p>
-              <div className={classes.dragonLifebarContainer}>
-                <div className={classes.dragonLifebarFill}></div>
-              </div>
+              {/* Компонент лайфбар дракона */}
+              <DragonLifebar dragon={dragon} />
+              {/* ------------------------------- */}
               <img src={Dragon} alt="..." />
             </div>
             <div className={classes.resultAndCircleContainer}>
               <SpecialResult />
-              <RollAllButton setActionModal={setActionModal} />
+              {
+                (() => {
+                  if (stage === "waiting") return <RollAllButton setActionModal={setActionModal} />
+                  if (!allRollingsEnd) return <div className={classes.plugRollbtn}></div>
+                  if (stage === "thrown" && allRollingsEnd) return <NextTurnButton acceptRoll={acceptRoll} />
+                })()
+              }
               {/* Счетчик броска в полукруге */}
               <div className={classes.circle}>
                 <p>{allRollingsEnd ? <span className={classes.countSpanCircle}>{rollResult.numeral}</span> : <span className={classes.countSpanCircle}>?</span>}</p>
@@ -67,10 +91,13 @@ function App() {
             </div>
 
             <div className={classes.knightContainer}>
-              <p>800/1000</p>
+              {/* Компонент лайфбар рыцаря */}
+              <KnightLifebar knight={knight} />
+              {/* <p>{knight.currentHealth}/{knight.maxHealth}</p>              
               <div className={classes.knightLifebarContainer}>
                 <div className={classes.knightLifebarFill}></div>
-              </div>
+              </div> */}
+              {/* ----------------------------- */}
               <img src={Knight} alt="..." />
             </div>
           </div>
@@ -90,13 +117,13 @@ function App() {
                   <svg width="50px" height="50px" version="1.1" viewBox="0 0 60 60" >
                     <path fill="#1d3557" d={coinsSvg_d} />
                   </svg>
-                  <p>55</p>
+                  <p>{dragon.wallet}</p>
                 </div>
                 <div className={classes.attackContainer}>
                   <svg width="50px" height="50px" version="1.1" viewBox="0 0 512 512" >
                     <path fill="#1d3557" d={choiceAttackSvg_d} />
                   </svg>
-                  <p>10</p>
+                  <p>{dragon.damage}</p>
                 </div>
 
 

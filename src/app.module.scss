@@ -100,18 +100,18 @@
     color: #1D3557;
 }
 
-.dragonLifebarContainer{
-    height: 10px;
-    width: 120px;
-    margin-bottom: 10px;
-    border: 1px solid #1D3557;
-}
+// .dragonLifebarContainer{
+//     height: 10px;
+//     width: 120px;
+//     margin-bottom: 10px;
+//     border: 1px solid #1D3557;
+// }
 
-.dragonLifebarFill{
-    height: 8px;
-    background-color: #1D3557;
-    width: 80%;
-}
+// .dragonLifebarFill{
+//     height: 8px;
+//     background-color: #1D3557;
+//     width: 80%;
+// }
 
 .knightContainer{
     display: flex;
@@ -120,18 +120,18 @@
     color: #1D3557;
 }
 
-.knightLifebarContainer{
-    height: 10px;
-    width: 120px;
-    margin-bottom: 10px;
-    border: 1px solid #1D3557;
-}
+// .knightLifebarContainer{
+//     height: 10px;
+//     width: 120px;
+//     margin-bottom: 10px;
+//     border: 1px solid #1D3557;
+// }
 
-.knightLifebarFill{
-    height: 8px;
-    background-color: #1D3557;
-    width: 90%;
-}
+// .knightLifebarFill{
+//     height: 8px;
+//     background-color: #1D3557;
+//     width: 90%;
+// }
 
 .openingSpeech{
     color: #1D3557;
@@ -196,4 +196,8 @@
         font-family: 'Anton', sans-serif;
         margin-left: 4px;
     }
+}
+
+.plugRollbtn{
+    height: 83px;
 }

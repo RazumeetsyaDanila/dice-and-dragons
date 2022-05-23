@@ -33,6 +33,8 @@ export const dicesReducer = (state = DicesInitialState, action: IDiceAction): ID
             }
         case DiceActionTypes.UNSET_DICE_ROLLING:
             return { ...state, dice: state.dice.map(d => d._id === action.payload ? { ...d, rolling: false } : d) }
+        case DiceActionTypes.UNSET_ACTION:
+            return { ...state, actionType: '', dice: DicesInitialState.dice, rollResult: DicesInitialState.rollResult}
         default:
             return state
     }

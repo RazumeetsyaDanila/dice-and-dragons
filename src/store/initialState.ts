@@ -1,5 +1,5 @@
-import {  IDicesState } from '../types/diceType';
-import {  IGameState, IDragonState, IKnightState } from '../types/gameType';
+import { IDicesState } from '../types/diceType';
+import { IGameState } from '../types/gameType';
 
 export const DicesInitialState: IDicesState = {
     dice: [{
@@ -53,21 +53,31 @@ export const DicesInitialState: IDicesState = {
 }
 
 export const GameInitialState: IGameState = {
+    dragon: {
+        maxHealth: 200,
+        currentHealth: 200,
+        wallet: 0,
+        damage: 10
+    },
+    knight: {
+        maxHealth: 1000,
+        currentHealth: 1000
+    },
     stepCount: 1,
     stage: 'waiting'
 }
 
-export const DragonInitialState: IDragonState = {
-    maxHealth: 200,
-    currentHealth: 200,
-    wallet: 0,
-    damage: 10
-}
+// export const DragonInitialState: IDragonState = {
+//     maxHealth: 200,
+//     currentHealth: 200,
+//     wallet: 0,
+//     damage: 10
+// }
 
-export const KnightInitialState: IKnightState = {
-    maxHealth: 200,
-    currentHealth: 200
-}
+// export const KnightInitialState: IKnightState = {
+//     maxHealth: 200,
+//     currentHealth: 200
+// }
 
 
 // export const DiceInitialState: IDiceState = {

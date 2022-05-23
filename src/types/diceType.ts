@@ -15,7 +15,8 @@ export interface IDicesState {
 export enum DiceActionTypes {
     SET_DICE_COUNT = 'SET_DICE_COUNT',
     SET_DICES_COUNT = 'SET_DICES_COUNT',
-    UNSET_DICE_ROLLING = 'UNSET_DICE_ROLLING'
+    UNSET_DICE_ROLLING = 'UNSET_DICE_ROLLING',
+    UNSET_ACTION = 'UNSET_ACTION'
 }
 
 interface ISetDiceCountAction {
@@ -46,7 +47,11 @@ interface ISetDiceRollingAction {
     payload: number
 }
 
-export type IDiceAction = ISetDiceCountAction | ISetDiceRollingAction | ISetDicesCountAction
+interface IUnsetActionAction {
+    type: DiceActionTypes.UNSET_ACTION
+}
+
+export type IDiceAction = ISetDiceCountAction | ISetDiceRollingAction | ISetDicesCountAction | IUnsetActionAction
 
 // export interface IDiceState {
 //     counts: number[],
