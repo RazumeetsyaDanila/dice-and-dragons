@@ -1,20 +1,5 @@
 import { Dispatch } from "react"
 import {GameActionTypes, IGameAction } from '../../types/gameType';
-import { useTypedSelector } from '../../hooks/useTypedSelector';
-
-// const { dice, rollResult, actionType } = useTypedSelector(state => state.dices)
-// const { dragon, knight, stepCount, stage } = useTypedSelector(state => state.game)
-
-// export const dragonDamage = () => {
-//     const damage = rollResult['attack'] * rollResult['numeral']
-//     return (dispatch: Dispatch<IGameAction>) => {
-//         try {
-//             dispatch({ type: GameActionTypes.DRAGON_DAMAGE, payload: {damage: damage} })
-//         } catch (e) {
-//             console.log("ba");
-//         }
-//     }
-// }
 
 export const nextTurn = () => {
     return (dispatch: Dispatch<IGameAction>) => {
@@ -50,6 +35,36 @@ export const dragonDamaged = (damage: number) => {
     return (dispatch: Dispatch<IGameAction>) => {
         try {
             dispatch({ type: GameActionTypes.DRAGON_DAMAGED, payload: {damage: damage}})
+        } catch (e) {
+            console.log("ba");
+        }
+    }
+}
+
+export const takeCoinsForReroll = (coins: number) => {
+    return (dispatch: Dispatch<IGameAction>) => {
+        try {
+            dispatch({ type: GameActionTypes.TAKE_COINS_FOR_REROLL, payload: {coins: coins}})
+        } catch (e) {
+            console.log("ba");
+        }
+    }
+}
+
+export const healing = (life: number) => {
+    return (dispatch: Dispatch<IGameAction>) => {
+        try {
+            dispatch({ type: GameActionTypes.HEALING, payload: {life: life}})
+        } catch (e) {
+            console.log("ba");
+        }
+    }
+}
+
+export const knightDamaged = (damage: number) => {
+    return (dispatch: Dispatch<IGameAction>) => {
+        try {
+            dispatch({ type: GameActionTypes.KNIGHT_DAMAGED, payload: {damage: damage}})
         } catch (e) {
             console.log("ba");
         }

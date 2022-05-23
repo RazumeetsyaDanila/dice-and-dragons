@@ -10,17 +10,18 @@ export interface IGameState {
         currentHealth: number
     },
     stepCount: number,
-    stage: string //waiting, thrown, goodEnd, badEnd
+    stage: string //waiting, thrown, goodOver, badOver
 }
 
 export enum GameActionTypes {
     DRAGON_DAMAGED = 'DRAGON_DAMAGED',
-    HEAL_DAMAGE = 'HEAL_DAMAGE',
+    HEALING = 'HEALING',
     COLLECT_COIN = 'COLLECT_COIN',
-    KNIGHT_DAMAGE = 'KNIGHT_DAMAGE',
+    KNIGHT_DAMAGED = 'KNIGHT_DAMAGED',
     NEXT_TURN = 'NEXT_TURN',
     NEXT_STAGE = 'NEXT_STAGE',
-    GET_COIN = 'GET_COIN'
+    GET_COIN = 'GET_COIN',
+    TAKE_COINS_FOR_REROLL = 'TAKE_COINS_FOR_REROLL'
 }
 
 interface INextTurnAction {
@@ -29,6 +30,13 @@ interface INextTurnAction {
 
 interface IDragonDamageAction {
     type: GameActionTypes.DRAGON_DAMAGED,
+    payload: {
+        damage: number
+    }
+}
+
+interface IKnightDamageAction {
+    type: GameActionTypes.KNIGHT_DAMAGED,
     payload: {
         damage: number
     }
@@ -48,6 +56,26 @@ interface IGetCoinAction {
     }
 }
 
+interface ITakeCoinsForRerollAction {
+    type: GameActionTypes.TAKE_COINS_FOR_REROLL,
+    payload: {
+        coins: number
+    }
+}
+
+interface IHealingAction {
+    type: GameActionTypes.HEALING,
+    payload: {
+        life: number
+    }
+}
 
 
-export type IGameAction = IDragonDamageAction | INextTurnAction | INextStageAction | IGetCoinAction
+
+export type IGameAction = IDragonDamageAction
+    | INextTurnAction
+    | INextStageAction
+    | IGetCoinAction
+    | ITakeCoinsForRerollAction
+    | IHealingAction
+    | IKnightDamageAction

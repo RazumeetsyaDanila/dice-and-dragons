@@ -201,3 +201,16 @@
 .plugRollbtn{
     height: 83px;
 }
+
+.badGameOverContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #1D3557;
+    font-size: 16px;
+    & p {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+}

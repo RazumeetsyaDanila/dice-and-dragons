@@ -60,29 +60,9 @@ export const GameInitialState: IGameState = {
         damage: 10
     },
     knight: {
-        maxHealth: 1000,
-        currentHealth: 1000
+        maxHealth: 500,
+        currentHealth: 500
     },
     stepCount: 1,
     stage: 'waiting'
 }
-
-// export const DragonInitialState: IDragonState = {
-//     maxHealth: 200,
-//     currentHealth: 200,
-//     wallet: 0,
-//     damage: 10
-// }
-
-// export const KnightInitialState: IKnightState = {
-//     maxHealth: 200,
-//     currentHealth: 200
-// }
-
-
-// export const DiceInitialState: IDiceState = {
-//     counts: [1, 1, 1, 1, 1, 1],
-//     rolling: [false, false, false, false, false, false],
-//     rollCounter: 0,
-//     specials: ['magic', 'magic', 'magic', 'magic', 'magic', 'magic']
-// }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.scss';
 import { BrowserRouter } from 'react-router-dom';
 import Dice from './components/dice/Dice';
@@ -7,6 +7,7 @@ import classes from './app.module.scss'
 import { useTypedSelector } from './hooks/useTypedSelector';
 import Dragon from './img/dragons/DragonKnight1.svg';
 import Knight from './img/dragons/DragonKnight2.svg';
+import Death from './img/dragons/Death.svg';
 import RollAllButton from './components/rollAllbutton/RollAllButton';
 import SpecialResult from './components/specialResult/SpecialResult';
 import Modal from './components/modal/Modal';
@@ -15,15 +16,17 @@ import { coinsSvg_d, choiceAttackSvg_d } from './img/svg/svgImages'
 import NextTurnButton from './components/nextTurnButton/NextTurnButton';
 import DragonLifebar from './components/dragonLifebar/DragonLifebar';
 import KnightLifebar from './components/knightLifebar/KnightLifebar';
+import GameOver from './components/gameOver/GameOver';
 
 function App() {
-  const { setDices, nextTurn, nextStage, unsetAction, getCoin, dragonDamaged } = useActions()
+  const { setDices, nextTurn, nextStage, getCoin, dragonDamaged, healing, knightDamaged } = useActions()
   const { dice, rollResult, actionType } = useTypedSelector(state => state.dices)
   const { dragon, knight, stepCount, stage } = useTypedSelector(state => state.game)
   const allRollingsEnd = !dice[0].rolling && !dice[1].rolling && !dice[2].rolling && !dice[3].rolling && !dice[4].rolling && !dice[5].rolling
 
   const [actionModal, setActionModal] = useState(false)
-  const [startGameModal, setStartGameModal] = useState(false)
+  const [startGameModal, setStartGameModal] = useState(true)
+  const [badGameOverModal, setBadGameOverModal] = useState(false)
 
   const roll = (actionType: string) => {
     setDices(actionType)
@@ -31,18 +34,37 @@ function App() {
     nextStage('thrown')
   }
 
+  useEffect(() => {
+    setTimeout(() => {
+      if (stage === 'waiting') dragonDamaged(rollResult.numeral * rollResult.attack)
+      if(stage === 'badOver') setBadGameOverModal(true)
+    }, 1000 + Math.floor(Math.random() * 500))
+  }, [stage])
+
+  useEffect(() => {
+    if(dragon.currentHealth <= 0) nextStage('badOver')
+    if(knight.currentHealth <= 0) nextStage('goodOver')
+  }, [dragon.currentHealth])
+
+
   const acceptRoll = () => {
     switch (actionType) {
       case 'coin':
         getCoin(rollResult.coin * rollResult.numeral)
         break
+      case 'life':
+        healing(rollResult.life * rollResult.numeral)
+        break
+      case 'attack':
+        knightDamaged(rollResult.attack * rollResult.numeral + dragon.damage)
+        break
       default:
         break
     }
-    setDices('')    
+    setDices('')
     nextTurn()
     nextStage('waiting')
-    dragonDamaged(rollResult.numeral * rollResult.attack)
+
   }
 
   return (
@@ -71,15 +93,15 @@ function App() {
           <div className={classes.dragonCircleKnightContainer}>
             <div className={classes.dragonContainer}>
               {/* Компонент лайфбар дракона */}
-              <DragonLifebar dragon={dragon} />
-              {/* ------------------------------- */}
+              <DragonLifebar dragon={dragon} allRollingsEnd={allRollingsEnd} rollResult={rollResult} stage={stage} />
               <img src={Dragon} alt="..." />
             </div>
             <div className={classes.resultAndCircleContainer}>
               <SpecialResult />
               {
                 (() => {
-                  if (stage === "waiting") return <RollAllButton setActionModal={setActionModal} />
+                  if (stage === "waiting" || stage === "badOver" || stage === "goodOver") 
+                    return <RollAllButton setActionModal={setActionModal} />
                   if (!allRollingsEnd) return <div className={classes.plugRollbtn}></div>
                   if (stage === "thrown" && allRollingsEnd) return <NextTurnButton acceptRoll={acceptRoll} />
                 })()
@@ -93,11 +115,6 @@ function App() {
             <div className={classes.knightContainer}>
               {/* Компонент лайфбар рыцаря */}
               <KnightLifebar knight={knight} />
-              {/* <p>{knight.currentHealth}/{knight.maxHealth}</p>              
-              <div className={classes.knightLifebarContainer}>
-                <div className={classes.knightLifebarFill}></div>
-              </div> */}
-              {/* ----------------------------- */}
               <img src={Knight} alt="..." />
             </div>
           </div>
@@ -147,6 +164,17 @@ function App() {
                 <div className={classes.startGamebtn} onClick={() => setStartGameModal(false)}>Начать игру</div>
               </div>
             </Modal>
+
+
+            <GameOver visible={badGameOverModal} setVisible={setBadGameOverModal}>
+              <div className={classes.badGameOverContainer}>
+                <p>Конец игры</p>
+                <img src={Death} alt="..." />
+                Тихо сел и грустно покачал головой дракон <br />
+                И он видом всем намекал о том <br />
+                Что и мне пора бы сдать доспех на металлолом...
+              </div>
+            </GameOver>
 
           </div>
         </div>
