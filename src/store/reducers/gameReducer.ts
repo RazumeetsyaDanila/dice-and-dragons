@@ -20,6 +20,8 @@ export const gameReducer = (state = GameInitialState, action: IGameAction): IGam
             return { ...state, dragon: { ...state.dragon, currentHealth: heal } }
         case GameActionTypes.KNIGHT_DAMAGED:
             return { ...state, knight: { ...state.knight, currentHealth: state.knight.currentHealth - action.payload.damage } }
+        case GameActionTypes.KNIGHT_DAMAGE_UP:
+            return {...state, knight: {...state.knight, damage: state.knight.damage + action.payload.damageUp}}
         default:
             return state
     }

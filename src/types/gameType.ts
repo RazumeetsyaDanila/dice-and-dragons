@@ -7,7 +7,8 @@ export interface IGameState {
     },
     knight: {
         maxHealth: number,
-        currentHealth: number
+        currentHealth: number,
+        damage: number
     },
     stepCount: number,
     stage: string //waiting, thrown, goodOver, badOver
@@ -21,7 +22,8 @@ export enum GameActionTypes {
     NEXT_TURN = 'NEXT_TURN',
     NEXT_STAGE = 'NEXT_STAGE',
     GET_COIN = 'GET_COIN',
-    TAKE_COINS_FOR_REROLL = 'TAKE_COINS_FOR_REROLL'
+    TAKE_COINS_FOR_REROLL = 'TAKE_COINS_FOR_REROLL',
+    KNIGHT_DAMAGE_UP = 'KNIGHT_DAMAGE_UP'
 }
 
 interface INextTurnAction {
@@ -70,6 +72,13 @@ interface IHealingAction {
     }
 }
 
+interface IKnightDamageUp {
+    type: GameActionTypes.KNIGHT_DAMAGE_UP,
+    payload: {
+        damageUp: number
+    }
+}
+
 
 
 export type IGameAction = IDragonDamageAction
@@ -79,3 +88,4 @@ export type IGameAction = IDragonDamageAction
     | ITakeCoinsForRerollAction
     | IHealingAction
     | IKnightDamageAction
+    | IKnightDamageUp

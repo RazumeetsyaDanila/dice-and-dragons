@@ -70,3 +70,13 @@ export const knightDamaged = (damage: number) => {
         }
     }
 }
+
+export const knightDamageUp = (damageUp: number) => {
+    return (dispatch: Dispatch<IGameAction>) => {
+        try {
+            dispatch({ type: GameActionTypes.KNIGHT_DAMAGE_UP, payload: {damageUp: damageUp}})
+        } catch (e) {
+            console.log("ba");
+        }
+    }
+}
