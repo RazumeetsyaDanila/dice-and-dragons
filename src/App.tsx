@@ -132,8 +132,9 @@ function App() {
             <div className={classes.diceContainer}>
               {
                 dice.map(d => <Dice diceId={d._id} key={d._id} />)
-              }
-            </div>
+              }              
+              <p>Перебросить кубик - 5 монет</p>
+            </div>            
           </div>
 
           <div className={classes.footer}>
@@ -158,7 +159,7 @@ function App() {
               <p>Перебросить кубики</p>
               <p>Перевыбрать действие</p>
               <p>Выпить лечебное зелье</p>
-              <p>Перебросить кубик - 5 монет</p>
+              
             </div>
 
             {/* Окно выбора действия */}
