@@ -17,6 +17,7 @@ import NextTurnButton from './components/nextTurnButton/NextTurnButton';
 import DragonLifebar from './components/dragonLifebar/DragonLifebar';
 import KnightLifebar from './components/knightLifebar/KnightLifebar';
 import GameOver from './components/gameOver/GameOver';
+import ShopModal from './components/shopModal/ShopModal';
 
 function App() {
   const { setDices, nextTurn, nextStage, getCoin, dragonDamaged, healing, knightDamaged, knightDamageUp } = useActions()
@@ -25,9 +26,10 @@ function App() {
   const allRollingsEnd = !dice[0].rolling && !dice[1].rolling && !dice[2].rolling && !dice[3].rolling && !dice[4].rolling && !dice[5].rolling
 
   const [actionModal, setActionModal] = useState(false)
-  const [startGameModal, setStartGameModal] = useState(true)
+  const [startGameModal, setStartGameModal] = useState(false)
   const [badGameOverModal, setBadGameOverModal] = useState(false)
   const [goodGameOverModal, setGoodGameOverModal] = useState(false)
+  const [shopModal, setShopModal] = useState(true)
 
   const roll = (actionType: string) => {
     setDices(actionType)
@@ -38,20 +40,20 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       if (stage === 'waiting') dragonDamaged(rollResult.numeral * rollResult.attack + knight.damage)
-      if(stage === 'badOver') setBadGameOverModal(true)
-      if(stage === 'goodOver') setGoodGameOverModal(true)
+      if (stage === 'badOver') setBadGameOverModal(true)
+      if (stage === 'goodOver') setGoodGameOverModal(true)
     }, 1000 + Math.floor(Math.random() * 500))
   }, [stage])
 
   useEffect(() => {
-    if(dragon.currentHealth <= 0) nextStage('badOver')
-    if(knight.currentHealth <= 0) nextStage('goodOver')
+    if (dragon.currentHealth <= 0) nextStage('badOver')
+    if (knight.currentHealth <= 0) nextStage('goodOver')
   }, [dragon.currentHealth, knight.currentHealth])
 
   useEffect(() => {
-    if(stepCount === 3) knightDamageUp(10)
-    if(stepCount === 7) knightDamageUp(20)
-    if(stepCount === 10) knightDamageUp(30)
+    if (stepCount === 3) knightDamageUp(10)
+    if (stepCount === 7) knightDamageUp(20)
+    if (stepCount === 10) knightDamageUp(30)
   }, [stepCount])
 
   const acceptRoll = () => {
@@ -107,7 +109,7 @@ function App() {
               <SpecialResult />
               {
                 (() => {
-                  if (stage === "waiting" || stage === "badOver" || stage === "goodOver") 
+                  if (stage === "waiting" || stage === "badOver" || stage === "goodOver")
                     return <RollAllButton setActionModal={setActionModal} />
                   if (!allRollingsEnd) return <div className={classes.plugRollbtn}></div>
                   if (stage === "thrown" && allRollingsEnd) return <NextTurnButton acceptRoll={acceptRoll} />
@@ -192,6 +194,10 @@ function App() {
                 Что и мне пора бы сдать доспех на металлолом...
               </div>
             </GameOver>
+
+            {/* shop */}
+            <ShopModal visible={shopModal} setVisible={setShopModal} coinCount={dragon.wallet}>
+            </ShopModal>
 
           </div>
         </div>
