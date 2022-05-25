@@ -6,21 +6,32 @@
     color: #1D3557;
 }
 
-.knightContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
+.lvl{
+    margin-bottom: 4px;
 }
 
 .knightLifebarContainer{
-    height: 10px;
-    width: 120px;
+    height: 14px;
+    width: 130px;
     margin-bottom: 10px;
     border: 1px solid #1D3557;
+    border-radius: 2px;    
+    display: flex;
+    & .hp{        
+        width: inherit;
+        height: inherit;
+        text-align: center;
+    }
+}
+.knightLifebarFill{
+    height: 12px;
+    background-color: #457B9D;
+    color: #1D3557;
+    font-size: 10px;
 }
 
-.knightLifebarFill{
-    height: 8px;
-    background-color: #1D3557;
-    // width: 80%;
+
+.hp{
+    position: absolute;
+    font-size: 10px;
 }

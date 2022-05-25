@@ -9,17 +9,12 @@ const DragonLifebar: React.FC<any> = ({ dragon, allRollingsEnd, rollResult, stag
     return (
         <div>
             <div className={classes.dragonLifebarBox}>
-                <p>{dragon.currentHealth}/{dragon.maxHealth}</p>
-                {/* {
-                    allRollingsEnd && stage === 'thrown' ?
-                    <p>{dragon.currentHealth}/{dragon.maxHealth}</p>
-                    :
-                    <p>{dragon.currentHealth}//{dragon.maxHealth}</p>
-                } */}
+                <p className={classes.lvl}>1 уровень</p>
                 <div className={classes.dragonLifebarContainer}>
+                    <p className={classes.hp}>{dragon.currentHealth}/{dragon.maxHealth}</p>
                     {
                         (() => {
-                            if (lifePercent >= 70) return <div className={classes.dragonLifebarFill} style={{ width: lifePercent + '%', backgroundColor: "#1D3557" }}></div>
+                            if (lifePercent >= 70) return <div className={classes.dragonLifebarFill} style={{ width: lifePercent + '%', backgroundColor: "#457B9D" }}></div>
                             if (lifePercent < 70 && lifePercent >= 40) return <div className={classes.dragonLifebarFill} style={{ width: lifePercent + '%', backgroundColor: "#F77F00" }}></div>
                             if (lifePercent < 40) return <div className={classes.dragonLifebarFill} style={{ width: lifePercent + '%', backgroundColor: "#D62828" }}></div>
                         })()

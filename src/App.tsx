@@ -26,10 +26,10 @@ function App() {
   const allRollingsEnd = !dice[0].rolling && !dice[1].rolling && !dice[2].rolling && !dice[3].rolling && !dice[4].rolling && !dice[5].rolling
 
   const [actionModal, setActionModal] = useState(false)
-  const [startGameModal, setStartGameModal] = useState(false)
+  const [startGameModal, setStartGameModal] = useState(true)
   const [badGameOverModal, setBadGameOverModal] = useState(false)
   const [goodGameOverModal, setGoodGameOverModal] = useState(false)
-  const [shopModal, setShopModal] = useState(true)
+  const [shopModal, setShopModal] = useState(false)
 
   const roll = (actionType: string) => {
     setDices(actionType)
@@ -132,9 +132,15 @@ function App() {
             <div className={classes.diceContainer}>
               {
                 dice.map(d => <Dice diceId={d._id} key={d._id} />)
-              }              
-              <p>Перебросить кубик - 5 монет</p>
-            </div>            
+              }
+            </div>
+
+            {
+              stage === 'thrown' ?
+                <p>Перебросить кубик - 5 монет</p>
+                :
+                <p>Бросьте кубики</p>
+            }
           </div>
 
           <div className={classes.footer}>
@@ -155,11 +161,8 @@ function App() {
 
 
               </div>
-              <p>Повышение базового урона</p>
-              <p>Перебросить кубики</p>
-              <p>Перевыбрать действие</p>
-              <p>Выпить лечебное зелье</p>
-              
+              <div className={classes.openShopBtn} onClick={() => setShopModal(true)}>Магазин</div>
+
             </div>
 
             {/* Окно выбора действия */}
@@ -198,6 +201,10 @@ function App() {
 
             {/* shop */}
             <ShopModal visible={shopModal} setVisible={setShopModal} coinCount={dragon.wallet}>
+              <p>Повышение базового урона</p>
+              <p>Перебросить кубики</p>
+              <p>Перевыбрать действие</p>
+              <p>Выпить лечебное зелье</p>
             </ShopModal>
 
           </div>
