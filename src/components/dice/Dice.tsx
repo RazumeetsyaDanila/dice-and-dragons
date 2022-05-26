@@ -12,7 +12,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
     const { wallet } = useTypedSelector(state => state.game.dragon)
     const { stage } = useTypedSelector(state => state.game)
     const { diceId } = props
-    const { setDice, unsetRolling, takeCoinsForReroll } = useActions()
+    const { setDice, unsetRolling, takeCoins } = useActions()
 
     useEffect(() => {
         unsetRolling(diceId)
@@ -20,7 +20,7 @@ const Dice: React.FC<IDiceProps> = (props) => {
 
     const rerollDice = () => {
         if(wallet >= 5 && stage === 'thrown'){
-            takeCoinsForReroll(5)
+            takeCoins(5)
             setDice(diceId)
         }        
     }

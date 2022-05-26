@@ -24,8 +24,18 @@ export enum GameActionTypes {
     NEXT_TURN = 'NEXT_TURN',
     NEXT_STAGE = 'NEXT_STAGE',
     GET_COIN = 'GET_COIN',
-    TAKE_COINS_FOR_REROLL = 'TAKE_COINS_FOR_REROLL',
-    KNIGHT_DAMAGE_UP = 'KNIGHT_DAMAGE_UP'
+    TAKE_COINS = 'TAKE_COINS',
+    KNIGHT_DAMAGE_UP = 'KNIGHT_DAMAGE_UP',
+    DRAGON_LEVEL_UP = 'DRAGON_LEVEL_UP'
+}
+
+
+interface IDragonLevelUp {
+    type: GameActionTypes.DRAGON_LEVEL_UP,
+    payload: {
+        damage: number,
+        life: number
+    }
 }
 
 interface INextTurnAction {
@@ -60,8 +70,8 @@ interface IGetCoinAction {
     }
 }
 
-interface ITakeCoinsForRerollAction {
-    type: GameActionTypes.TAKE_COINS_FOR_REROLL,
+interface ITakeCoinsAction {
+    type: GameActionTypes.TAKE_COINS,
     payload: {
         coins: number
     }
@@ -87,7 +97,8 @@ export type IGameAction = IDragonDamageAction
     | INextTurnAction
     | INextStageAction
     | IGetCoinAction
-    | ITakeCoinsForRerollAction
+    | ITakeCoinsAction
     | IHealingAction
     | IKnightDamageAction
     | IKnightDamageUp
+    | IDragonLevelUp

@@ -41,10 +41,10 @@ export const dragonDamaged = (damage: number) => {
     }
 }
 
-export const takeCoinsForReroll = (coins: number) => {
+export const takeCoins = (coins: number) => {
     return (dispatch: Dispatch<IGameAction>) => {
         try {
-            dispatch({ type: GameActionTypes.TAKE_COINS_FOR_REROLL, payload: {coins: coins}})
+            dispatch({ type: GameActionTypes.TAKE_COINS, payload: {coins: coins}})
         } catch (e) {
             console.log("ba");
         }
@@ -75,6 +75,16 @@ export const knightDamageUp = (damageUp: number) => {
     return (dispatch: Dispatch<IGameAction>) => {
         try {
             dispatch({ type: GameActionTypes.KNIGHT_DAMAGE_UP, payload: {damageUp: damageUp}})
+        } catch (e) {
+            console.log("ba");
+        }
+    }
+}
+
+export const dragonLevelUp = (damageUp: number, healthUp: number) => {
+    return (dispatch: Dispatch<IGameAction>) => {
+        try {
+            dispatch({ type: GameActionTypes.DRAGON_LEVEL_UP, payload: {damage: damageUp, life: healthUp}})
         } catch (e) {
             console.log("ba");
         }

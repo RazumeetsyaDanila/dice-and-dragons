@@ -12,7 +12,7 @@ export const gameReducer = (state = GameInitialState, action: IGameAction): IGam
             return { ...state, stage: action.payload.stageName }
         case GameActionTypes.GET_COIN:
             return { ...state, dragon: { ...state.dragon, wallet: state.dragon.wallet + action.payload.coins } }
-        case GameActionTypes.TAKE_COINS_FOR_REROLL:
+        case GameActionTypes.TAKE_COINS:
             return { ...state, dragon: { ...state.dragon, wallet: state.dragon.wallet - action.payload.coins } }
         case GameActionTypes.HEALING:
             let heal = state.dragon.currentHealth + action.payload.life
@@ -22,6 +22,9 @@ export const gameReducer = (state = GameInitialState, action: IGameAction): IGam
             return { ...state, knight: { ...state.knight, currentHealth: state.knight.currentHealth - action.payload.damage } }
         case GameActionTypes.KNIGHT_DAMAGE_UP:
             return {...state, knight: {...state.knight, damage: state.knight.damage + action.payload.damageUp}}
+        case GameActionTypes.DRAGON_LEVEL_UP:
+            return {...state, dragon: {...state.dragon, damage: state.dragon.damage + action.payload.damage, 
+                level: ++state.dragon.level, maxHealth: state.dragon.maxHealth + action.payload.life, currentHealth: state.dragon.currentHealth + action.payload.life}}
         default:
             return state
     }
