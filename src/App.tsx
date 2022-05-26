@@ -12,24 +12,25 @@ import RollAllButton from './components/rollAllbutton/RollAllButton';
 import SpecialResult from './components/specialResult/SpecialResult';
 import Modal from './components/modal/Modal';
 import ChoiceBox from './components/choiceBox/ChoiceBox';
-import { coinsSvg_d, choiceAttackSvg_d } from './img/svg/svgImages'
+import { coinsSvg_d, choiceAttackSvg_d, knightAttack_d } from './img/svg/svgImages'
 import NextTurnButton from './components/nextTurnButton/NextTurnButton';
 import DragonLifebar from './components/dragonLifebar/DragonLifebar';
 import KnightLifebar from './components/knightLifebar/KnightLifebar';
 import GameOver from './components/gameOver/GameOver';
 import ShopModal from './components/shopModal/ShopModal';
 
-function App() {
+const App: React.FC = () => {
   const { setDices, nextTurn, nextStage, getCoin, dragonDamaged, healing, knightDamaged, knightDamageUp } = useActions()
   const { dice, rollResult, actionType } = useTypedSelector(state => state.dices)
   const { dragon, knight, stepCount, stage } = useTypedSelector(state => state.game)
-  const allRollingsEnd = !dice[0].rolling && !dice[1].rolling && !dice[2].rolling && !dice[3].rolling && !dice[4].rolling && !dice[5].rolling
 
   const [actionModal, setActionModal] = useState(false)
   const [startGameModal, setStartGameModal] = useState(true)
   const [badGameOverModal, setBadGameOverModal] = useState(false)
   const [goodGameOverModal, setGoodGameOverModal] = useState(false)
   const [shopModal, setShopModal] = useState(false)
+
+  const allRollingsEnd = !dice[0].rolling && !dice[1].rolling && !dice[2].rolling && !dice[3].rolling && !dice[4].rolling && !dice[5].rolling
 
   const roll = (actionType: string) => {
     setDices(actionType)
@@ -52,8 +53,9 @@ function App() {
 
   useEffect(() => {
     if (stepCount === 3) knightDamageUp(10)
-    if (stepCount === 7) knightDamageUp(20)
-    if (stepCount === 10) knightDamageUp(30)
+    if (stepCount === 7) knightDamageUp(10)
+    if (stepCount === 10) knightDamageUp(10)
+    if (stepCount === 15) knightDamageUp(10)
   }, [stepCount])
 
   const acceptRoll = () => {
@@ -74,6 +76,10 @@ function App() {
     nextTurn()
     nextStage('waiting')
 
+  }
+
+  const purchase = (purchaseName: string) => {
+    setShopModal(false)
   }
 
   return (
@@ -143,6 +149,7 @@ function App() {
             }
           </div>
 
+          {/* Поле с характеристиками */}
           <div className={classes.footer}>
             <div className={classes.heroInfo}>
               <div className={classes.walletAttackContainer}>
@@ -152,6 +159,7 @@ function App() {
                   </svg>
                   <p>{dragon.wallet}</p>
                 </div>
+
                 <div className={classes.attackContainer}>
                   <svg width="50px" height="50px" version="1.1" viewBox="0 0 512 512" >
                     <path fill="#1d3557" d={choiceAttackSvg_d} />
@@ -159,10 +167,14 @@ function App() {
                   <p>{dragon.damage}</p>
                 </div>
 
-
+                <div className={classes.knightAttackContainer}>
+                  <svg width="50px" height="50px" version="1.1" viewBox="0 0 512 512" >
+                    <path fill="#1d3557" d={knightAttack_d} />
+                  </svg>
+                  <p>{knight.damage}</p>
+                </div>
               </div>
               <div className={classes.openShopBtn} onClick={() => setShopModal(true)}>Магазин</div>
-
             </div>
 
             {/* Окно выбора действия */}
@@ -173,7 +185,9 @@ function App() {
             {/* Стартовое окно */}
             <Modal visible={startGameModal} setVisible={setStartGameModal}>
               <div className={classes.openingSpeech}>
-                <p>Добро пожаловать!</p>
+                <p style={{ fontSize: 18 + 'px' }}>Добро пожаловать!</p>
+                <p style={{ fontSize: 18 + 'px' }}>Ты - дракон! Убей рыцаря.</p>
+                {/* <p style={{ fontSize: 12 + 'px' }}>(моя игра, мои правила)</p> */}
                 <div className={classes.startGamebtn} onClick={() => setStartGameModal(false)}>Начать игру</div>
               </div>
             </Modal>
@@ -201,10 +215,29 @@ function App() {
 
             {/* shop */}
             <ShopModal visible={shopModal} setVisible={setShopModal} coinCount={dragon.wallet}>
-              <p>Повышение базового урона</p>
+              <div className={classes.shopContainer}>
+                <div className={classes.shopProductDragonCategory}>
+                  Дракон
+                  <div className={classes.shopProduct} onClick={() => purchase('levelup')}>Повышение уровня</div>
+                  <div className={classes.shopProduct} onClick={() => purchase('potion')}>Лечебное зелье</div>
+                </div>
+                <hr />
+                <div className={classes.shopProductGameCategory}>
+                  Кубики
+                  <div className={classes.shopProduct} onClick={() => purchase('reroll')}>Перебросить кубики</div>
+                  <div className={classes.shopProduct} onClick={() => purchase('rechoose')}>Перевыбрать действие</div>
+                  <div className={classes.shopProduct} onClick={() => purchase('dubleResult')}>Удвоить результат</div>
+                </div>
+                <hr />
+                <div className={classes.shopProductKnightCategory}>
+                  Рыцарь
+                  <div className={classes.shopProduct}></div>
+                </div>
+              </div>
+              {/* <p>Повышение уровня</p>
               <p>Перебросить кубики</p>
               <p>Перевыбрать действие</p>
-              <p>Выпить лечебное зелье</p>
+              <p>Выпить лечебное зелье</p> */}
             </ShopModal>
 
           </div>

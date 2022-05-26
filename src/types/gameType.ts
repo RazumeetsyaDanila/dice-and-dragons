@@ -3,12 +3,14 @@ export interface IGameState {
         maxHealth: number,
         currentHealth: number,
         wallet: number,
-        damage: number
+        damage: number,
+        level: number
     },
     knight: {
         maxHealth: number,
         currentHealth: number,
-        damage: number
+        damage: number,
+        level: number
     },
     stepCount: number,
     stage: string //waiting, thrown, goodOver, badOver

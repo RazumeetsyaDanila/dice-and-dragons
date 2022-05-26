@@ -7,7 +7,7 @@ const KnightLifebar: React.FC<any> = ({ knight }) => {
     if (knight.currentHealth <= 0) lifePercent = 0
     return (
         <div className={classes.knightLifebarBox}>
-            <p className={classes.lvl}>1 уровень</p>
+            <p className={classes.lvl}>{knight.level} уровень</p>
             <div className={classes.knightLifebarContainer}>
                 <p className={classes.hp}>{knight.currentHealth}/{knight.maxHealth}</p>
                 {

@@ -57,12 +57,14 @@ export const GameInitialState: IGameState = {
         maxHealth: 200,
         currentHealth: 200,
         wallet: 0,
-        damage: 10
+        damage: 10,
+        level: 1
     },
     knight: {
         maxHealth: 500,
         currentHealth: 500,
-        damage: 0
+        damage: 0,
+        level: 1
     },
     stepCount: 1,
     stage: 'waiting'

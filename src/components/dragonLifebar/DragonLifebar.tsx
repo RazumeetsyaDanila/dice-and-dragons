@@ -9,7 +9,7 @@ const DragonLifebar: React.FC<any> = ({ dragon, allRollingsEnd, rollResult, stag
     return (
         <div>
             <div className={classes.dragonLifebarBox}>
-                <p className={classes.lvl}>1 уровень</p>
+                <p className={classes.lvl}>{dragon.level} уровень</p>
                 <div className={classes.dragonLifebarContainer}>
                     <p className={classes.hp}>{dragon.currentHealth}/{dragon.maxHealth}</p>
                     {

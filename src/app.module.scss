@@ -179,7 +179,19 @@
 .walletContainer{
     
     display: flex;
-    width: 160px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    // border-right: #1D3557 1px solid;
+    // border-bottom: #1D3557 2px solid;
+    & p{
+        font-family: 'Anton', sans-serif;
+        margin-left: 4px;
+    }
+}
+.attackContainer{
+    display: flex;
+    width: 150px;
     justify-content: center;
     align-items: center;
     border-right: #1D3557 1px solid;
@@ -189,9 +201,10 @@
         margin-left: 4px;
     }
 }
-.attackContainer{
+
+.knightAttackContainer{
     display: flex;
-    width: 160px;
+    width: 150px;
     justify-content: center;
     align-items: center;
     border-left: #1D3557 1px solid;
@@ -246,4 +259,62 @@
         background-color: #254572;
         cursor: pointer;
     }
+}
+
+.shopContainer{
+    display: flex;
+    & hr {
+        width: 1px;
+        height: 294px;
+        color: #1D3557;
+    }
+
+}
+
+.shopProduct{
+    background-color: #254572;
+    width: 140px;
+    height: 42px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 10.5px;
+    color: #dfdfdf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #1D3557 2px solid;
+    &:hover{
+        background-color: #1D3557;
+        cursor: pointer;
+        box-shadow: 2px 2px 2px 1px rgba(13, 13, 83, 0.2);
+        font-size: 11px;
+        width: 142px;
+        height: 42px;
+    }
+}
+
+.shopProductDragonCategory{
+    width: 140px;
+    margin-right: 10px;
+    color: #1D3557;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shopProductGameCategory{
+    width: 140px;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #1D3557;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shopProductKnightCategory{
+    width: 140px;
+    margin-left: 10px;
+    color: #1D3557;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
