@@ -62,8 +62,8 @@ export const GameInitialState: IGameState = {
         level: 1
     },
     knight: {
-        maxHealth: 500,
-        currentHealth: 500,
+        maxHealth: 1000,
+        currentHealth: 1000,
         damage: 0,
         level: 1
     },
@@ -72,5 +72,15 @@ export const GameInitialState: IGameState = {
 }
 
 export const ShopInitialState: IShopState = {
-    
+    dragon: {
+        levelUp: true
+    },
+    dices: {
+        rechoice: true,
+        reroll: true,
+        double: true
+    },
+    knight: {
+
+    }
 }

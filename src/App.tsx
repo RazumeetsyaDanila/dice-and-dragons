@@ -18,12 +18,14 @@ import DragonLifebar from './components/dragonLifebar/DragonLifebar';
 import KnightLifebar from './components/knightLifebar/KnightLifebar';
 import GameOver from './components/gameOver/GameOver';
 import ShopModal from './components/shopModal/ShopModal';
+import PurchaseButton from './components/purchaseButton/PurchaseButton';
 
 const App: React.FC = () => {
   const { setDices, nextTurn, nextStage, getCoin, dragonDamaged, healing, knightDamaged, knightDamageUp } = useActions()
   const actions = useActions()
   const { dice, rollResult, actionType } = useTypedSelector(state => state.dices)
   const { dragon, knight, stepCount, stage } = useTypedSelector(state => state.game)
+  const shop = useTypedSelector(state => state.shop)
 
   const [actionModal, setActionModal] = useState(false)
   const [rechoiceActionModal, setRechoiceActionModal] = useState(false)
@@ -77,42 +79,48 @@ const App: React.FC = () => {
         break
       case 'attack':
         knightDamaged(rollResult.attack * rollResult.numeral + dragon.damage)
+        if (knight.currentHealth <= 0) nextStage('goodOver')
         break
       default:
         break
     }
     setDices('')
     nextTurn()
-    nextStage('waiting')
+    actions.restoreShop()
+    if (knight.currentHealth >= 0) nextStage('waiting')
   }
 
   const purchase = (purchaseName: string) => {
-    switch (purchaseName){
+    switch (purchaseName) {
       case 'levelup':
-        if(dragon.wallet >= 30){
+        if (dragon.wallet >= 30) {
           actions.dragonLevelUp(10, 20)
           actions.takeCoins(30)
+          actions.lelelUpBuy()
         } break
       case 'doubleResult':
-        if(dragon.wallet >= 30){
+        if (dragon.wallet >= 30 && stage === 'thrown') {
           actions.doubleResult()
           actions.takeCoins(30)
           setShopModal(false)
+          actions.doubleBuy()
         } break
       case 'reroll':
-        if(dragon.wallet >= 15 && stage === 'thrown'){
+        if (dragon.wallet >= 15 && stage === 'thrown') {
           actions.setDices(actionType)
           actions.takeCoins(15)
           setShopModal(false)
+          actions.rerollBuy()
         } break
       case 'rechoice':
-        if(dragon.wallet >= 15 && stage === 'thrown'){
+        if (dragon.wallet >= 15 && stage === 'thrown') {
           setShopModal(false)
           actions.takeCoins(15)
           setRechoiceActionModal(true)
+          actions.rechoiceBuy()
         } break
     }
-    
+
   }
 
   return (
@@ -254,21 +262,40 @@ const App: React.FC = () => {
             <ShopModal visible={shopModal} setVisible={setShopModal} coinCount={dragon.wallet}>
               <div className={classes.shopContainer}>
                 <div className={classes.shopProductDragonCategory}>
-                  Дракон
-                  <div className={classes.shopProduct} onClick={() => purchase('levelup')}>Повышение уровня (30)</div>
-                  {/* <div className={classes.shopProduct} onClick={() => purchase('potion')}>Лечебное зелье</div> */}
+                  <p>Дракон</p>
+                  {
+                    shop.dragon.levelUp ?
+                    <PurchaseButton cost={30} name={"Повышение уровня"} onclick={() => purchase('levelup')}/>
+                    :
+                    <PurchaseButton cost={30} name={"Закончилось"} onclick={() => {}}/>
+                  }
                 </div>
                 <hr />
                 <div className={classes.shopProductGameCategory}>
-                  Кубики
-                  <div className={classes.shopProduct} onClick={() => purchase('reroll')}>Перебросить кубики (15)</div>
-                  <div className={classes.shopProduct} onClick={() => purchase('rechoice')}>Другое действие (15)</div>
-                  <div className={classes.shopProduct} onClick={() => purchase('doubleResult')}>Удвоить результат (30)</div>
+                  <p>Кубики</p>
+                  {
+                    shop.dices.reroll ?
+                      <PurchaseButton cost={15} name={"Перебросить кубики"} onclick={() => purchase('reroll')}/>
+                      :
+                      <PurchaseButton cost={15} name={"Закончилось"} onclick={() => {}}/>
+                  }
+                  {
+                    shop.dices.rechoice ?
+                      <PurchaseButton cost={15} name={"Другое действие"} onclick={() => purchase('rechoice')}/>
+                      :
+                      <PurchaseButton cost={15} name={"Закончилось"} onclick={() => {}}/>
+                  }
+                  {
+                    shop.dices.double ?                      
+                      <PurchaseButton cost={30} name={"Удвоить результат"} onclick={() => purchase('doubleResult')}/>
+                      :
+                      <PurchaseButton cost={30} name={"Закончилось"} onclick={() => {}}/>
+                  }
                 </div>
                 <hr />
                 <div className={classes.shopProductKnightCategory}>
-                  Рыцарь
-                  <div className={classes.shopProduct}></div>
+                  <p>Рыцарь</p>
+                  {/* <div className={classes.shopProduct}></div> */}
                 </div>
               </div>
             </ShopModal>
