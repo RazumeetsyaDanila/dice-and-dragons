@@ -90,3 +90,13 @@ export const dragonLevelUp = (damageUp: number, healthUp: number) => {
         }
     }
 }
+
+export const knightLevelUp = (damageUp: number, healthUp: number) => {
+    return (dispatch: Dispatch<IGameAction>) => {
+        try {
+            dispatch({ type: GameActionTypes.KNIGHT_LEVEL_UP, payload: {damage: damageUp, life: healthUp}})
+        } catch (e) {
+            console.log("ba");
+        }
+    }
+}

@@ -86,3 +86,13 @@ export const doubleResult = () => {
         }
     }
 }
+
+export const setActionType = (actionType: string) => {
+    return (dispatch: Dispatch<IDiceAction>) => {
+        try {
+            dispatch({ type: DiceActionTypes.SET_ACTION_TYPE, payload: {actionType: actionType}})
+        } catch (e) {
+            console.log("ba");
+        }
+    }
+}

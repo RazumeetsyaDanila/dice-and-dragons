@@ -1,5 +1,6 @@
 import { IDicesState } from '../types/diceType';
 import { IGameState } from '../types/gameType';
+import { IShopState } from '../types/shopType';
 
 export const DicesInitialState: IDicesState = {
     dice: [{
@@ -68,4 +69,8 @@ export const GameInitialState: IGameState = {
     },
     stepCount: 1,
     stage: 'waiting'
+}
+
+export const ShopInitialState: IShopState = {
+    
 }

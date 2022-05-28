@@ -26,12 +26,21 @@ export enum GameActionTypes {
     GET_COIN = 'GET_COIN',
     TAKE_COINS = 'TAKE_COINS',
     KNIGHT_DAMAGE_UP = 'KNIGHT_DAMAGE_UP',
-    DRAGON_LEVEL_UP = 'DRAGON_LEVEL_UP'
+    DRAGON_LEVEL_UP = 'DRAGON_LEVEL_UP',
+    KNIGHT_LEVEL_UP = 'KNIGHT_LEVEL_UP'
 }
 
 
 interface IDragonLevelUp {
     type: GameActionTypes.DRAGON_LEVEL_UP,
+    payload: {
+        damage: number,
+        life: number
+    }
+}
+
+interface IKnightLevelUp {
+    type: GameActionTypes.KNIGHT_LEVEL_UP,
     payload: {
         damage: number,
         life: number
@@ -102,3 +111,4 @@ export type IGameAction = IDragonDamageAction
     | IKnightDamageAction
     | IKnightDamageUp
     | IDragonLevelUp
+    | IKnightLevelUp

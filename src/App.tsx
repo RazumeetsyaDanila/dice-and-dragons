@@ -20,12 +20,13 @@ import GameOver from './components/gameOver/GameOver';
 import ShopModal from './components/shopModal/ShopModal';
 
 const App: React.FC = () => {
-  const { setDices, nextTurn, nextStage, getCoin, dragonDamaged, healing, knightDamaged, knightDamageUp, dragonLevelUp } = useActions()
+  const { setDices, nextTurn, nextStage, getCoin, dragonDamaged, healing, knightDamaged, knightDamageUp } = useActions()
   const actions = useActions()
   const { dice, rollResult, actionType } = useTypedSelector(state => state.dices)
   const { dragon, knight, stepCount, stage } = useTypedSelector(state => state.game)
 
   const [actionModal, setActionModal] = useState(false)
+  const [rechoiceActionModal, setRechoiceActionModal] = useState(false)
   const [startGameModal, setStartGameModal] = useState(true)
   const [badGameOverModal, setBadGameOverModal] = useState(false)
   const [goodGameOverModal, setGoodGameOverModal] = useState(false)
@@ -37,6 +38,11 @@ const App: React.FC = () => {
     setDices(actionType)
     setActionModal(false)
     nextStage('thrown')
+  }
+
+  const rechoiceAction = (actionType: string) => {
+    actions.setActionType(actionType)
+    setRechoiceActionModal(false)
   }
 
   useEffect(() => {
@@ -53,12 +59,12 @@ const App: React.FC = () => {
   }, [dragon.currentHealth, knight.currentHealth])
 
   useEffect(() => {
-    if (stepCount === 5) knightDamageUp(10)
-    if (stepCount === 8) knightDamageUp(10)
-    if (stepCount === 12) knightDamageUp(10)
-    if (stepCount === 15) knightDamageUp(10)
-    if (stepCount === 17) knightDamageUp(20)
-    if (stepCount === 20) knightDamageUp(30)
+    if (stepCount === 5) actions.knightLevelUp(10, 20)
+    if (stepCount === 8) actions.knightLevelUp(10, 20)
+    if (stepCount === 12) actions.knightLevelUp(20, 30)
+    if (stepCount === 15) actions.knightLevelUp(20, 30)
+    if (stepCount === 17) actions.knightLevelUp(20, 50)
+    if (stepCount === 20) actions.knightLevelUp(20, 50)
   }, [stepCount])
 
   const acceptRoll = () => {
@@ -78,7 +84,6 @@ const App: React.FC = () => {
     setDices('')
     nextTurn()
     nextStage('waiting')
-
   }
 
   const purchase = (purchaseName: string) => {
@@ -87,13 +92,24 @@ const App: React.FC = () => {
         if(dragon.wallet >= 30){
           actions.dragonLevelUp(10, 20)
           actions.takeCoins(30)
-          setShopModal(false)
         } break
       case 'doubleResult':
         if(dragon.wallet >= 30){
           actions.doubleResult()
           actions.takeCoins(30)
           setShopModal(false)
+        } break
+      case 'reroll':
+        if(dragon.wallet >= 15 && stage === 'thrown'){
+          actions.setDices(actionType)
+          actions.takeCoins(15)
+          setShopModal(false)
+        } break
+      case 'rechoice':
+        if(dragon.wallet >= 15 && stage === 'thrown'){
+          setShopModal(false)
+          actions.takeCoins(15)
+          setRechoiceActionModal(true)
         } break
     }
     
@@ -199,6 +215,10 @@ const App: React.FC = () => {
               <ChoiceBox roll={roll} />
             </Modal>
 
+            <Modal visible={rechoiceActionModal} setVisible={setRechoiceActionModal}>
+              <ChoiceBox roll={rechoiceAction} />
+            </Modal>
+
             {/* Стартовое окно */}
             <Modal visible={startGameModal} setVisible={setStartGameModal}>
               <div className={classes.openingSpeech}>
@@ -236,13 +256,13 @@ const App: React.FC = () => {
                 <div className={classes.shopProductDragonCategory}>
                   Дракон
                   <div className={classes.shopProduct} onClick={() => purchase('levelup')}>Повышение уровня (30)</div>
-                  <div className={classes.shopProduct} onClick={() => purchase('potion')}>Лечебное зелье</div>
+                  {/* <div className={classes.shopProduct} onClick={() => purchase('potion')}>Лечебное зелье</div> */}
                 </div>
                 <hr />
                 <div className={classes.shopProductGameCategory}>
                   Кубики
-                  <div className={classes.shopProduct} onClick={() => purchase('reroll')}>Перебросить кубики</div>
-                  <div className={classes.shopProduct} onClick={() => purchase('rechoose')}>Перевыбрать действие</div>
+                  <div className={classes.shopProduct} onClick={() => purchase('reroll')}>Перебросить кубики (15)</div>
+                  <div className={classes.shopProduct} onClick={() => purchase('rechoice')}>Другое действие (15)</div>
                   <div className={classes.shopProduct} onClick={() => purchase('doubleResult')}>Удвоить результат (30)</div>
                 </div>
                 <hr />
@@ -251,10 +271,6 @@ const App: React.FC = () => {
                   <div className={classes.shopProduct}></div>
                 </div>
               </div>
-              {/* <p>Повышение уровня</p>
-              <p>Перебросить кубики</p>
-              <p>Перевыбрать действие</p>
-              <p>Выпить лечебное зелье</p> */}
             </ShopModal>
 
           </div>
