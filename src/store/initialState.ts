@@ -62,8 +62,8 @@ export const GameInitialState: IGameState = {
         level: 1
     },
     knight: {
-        maxHealth: 1000,
-        currentHealth: 1000,
+        maxHealth: 500,
+        currentHealth: 500,
         damage: 0,
         level: 1
     },
