@@ -18,7 +18,12 @@ export enum DiceActionTypes {
     UNSET_DICE_ROLLING = 'UNSET_DICE_ROLLING',
     UNSET_ACTION = 'UNSET_ACTION',
     DOUBLE_RESULT = 'DOUBLE_RESULT',
-    SET_ACTION_TYPE = 'SET_ACTION_TYPE'
+    SET_ACTION_TYPE = 'SET_ACTION_TYPE',
+    RESTART = 'RESTART'
+}
+
+interface IRestarDicetAction {
+    type: DiceActionTypes.RESTART
 }
 
 interface ISetActionTypeAction {
@@ -70,6 +75,7 @@ export type IDiceAction = ISetDiceCountAction
     | IUnsetActionAction
     | IDoubleResult
     | ISetActionTypeAction
+    | IRestarDicetAction
 
 // export interface IDiceState {
 //     counts: number[],

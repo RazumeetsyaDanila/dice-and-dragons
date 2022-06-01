@@ -73,12 +73,24 @@ export const GameInitialState: IGameState = {
 
 export const ShopInitialState: IShopState = {
     dragon: {
-        levelUp: true
+        levelUp: {
+            available: true,
+            count: 1
+        }
     },
     dices: {
-        rechoice: true,
-        reroll: true,
-        double: true
+        rechoice: {
+            available: true,
+            count: 1
+        },
+        reroll: {
+            available: true,
+            count: 2
+        },
+        double: {
+            available: true,
+            count: 1
+        },
     },
     knight: {
 

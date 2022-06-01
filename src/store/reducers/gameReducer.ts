@@ -21,13 +21,23 @@ export const gameReducer = (state = GameInitialState, action: IGameAction): IGam
         case GameActionTypes.KNIGHT_DAMAGED:
             return { ...state, knight: { ...state.knight, currentHealth: state.knight.currentHealth - action.payload.damage } }
         case GameActionTypes.KNIGHT_DAMAGE_UP:
-            return {...state, knight: {...state.knight, damage: state.knight.damage + action.payload.damageUp}}
+            return { ...state, knight: { ...state.knight, damage: state.knight.damage + action.payload.damageUp } }
         case GameActionTypes.DRAGON_LEVEL_UP:
-            return {...state, dragon: {...state.dragon, damage: state.dragon.damage + action.payload.damage, 
-                level: ++state.dragon.level, maxHealth: state.dragon.maxHealth + action.payload.life, currentHealth: state.dragon.currentHealth + action.payload.life}}
+            return {
+                ...state, dragon: {
+                    ...state.dragon, damage: state.dragon.damage + action.payload.damage,
+                    level: ++state.dragon.level, maxHealth: state.dragon.maxHealth + action.payload.life, currentHealth: state.dragon.currentHealth + action.payload.life
+                }
+            }
         case GameActionTypes.KNIGHT_LEVEL_UP:
-            return {...state, knight: {...state.knight, damage: state.knight.damage + action.payload.damage, 
-                level: ++state.knight.level, maxHealth: state.knight.maxHealth + action.payload.life, currentHealth: state.knight.currentHealth + action.payload.life}}
+            return {
+                ...state, knight: {
+                    ...state.knight, damage: state.knight.damage + action.payload.damage,
+                    level: state.knight.level + 1, maxHealth: state.knight.maxHealth + action.payload.life, currentHealth: state.knight.currentHealth + action.payload.life
+                }
+            }
+        case GameActionTypes.RESTART:
+            return GameInitialState
         default:
             return state
     }

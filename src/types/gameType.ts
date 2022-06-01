@@ -27,9 +27,13 @@ export enum GameActionTypes {
     TAKE_COINS = 'TAKE_COINS',
     KNIGHT_DAMAGE_UP = 'KNIGHT_DAMAGE_UP',
     DRAGON_LEVEL_UP = 'DRAGON_LEVEL_UP',
-    KNIGHT_LEVEL_UP = 'KNIGHT_LEVEL_UP'
+    KNIGHT_LEVEL_UP = 'KNIGHT_LEVEL_UP',
+    RESTART = 'RESTART'
 }
 
+interface IRestarttAction {
+    type: GameActionTypes.RESTART
+}
 
 interface IDragonLevelUp {
     type: GameActionTypes.DRAGON_LEVEL_UP,
@@ -112,3 +116,4 @@ export type IGameAction = IDragonDamageAction
     | IKnightDamageUp
     | IDragonLevelUp
     | IKnightLevelUp
+    | IRestarttAction

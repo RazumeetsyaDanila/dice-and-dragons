@@ -39,6 +39,8 @@ export const dicesReducer = (state = DicesInitialState, action: IDiceAction): ID
             return {...state, rollResult: {...state.rollResult, numeral: state.rollResult.numeral * 2}}
         case DiceActionTypes.SET_ACTION_TYPE:
             return {...state, actionType: action.payload.actionType}
+        case DiceActionTypes.RESTART:
+            return DicesInitialState
         default:
             return state
     }

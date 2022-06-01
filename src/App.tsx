@@ -19,6 +19,7 @@ import KnightLifebar from './components/knightLifebar/KnightLifebar';
 import GameOver from './components/gameOver/GameOver';
 import ShopModal from './components/shopModal/ShopModal';
 import PurchaseButton from './components/purchaseButton/PurchaseButton';
+import PurchaseOver from './components/purchaseOver/PurchaseOver';
 
 const App: React.FC = () => {
   const { setDices, nextTurn, nextStage, getCoin, dragonDamaged, healing, knightDamaged, knightDamageUp } = useActions()
@@ -123,6 +124,15 @@ const App: React.FC = () => {
 
   }
 
+  const restart = () => {
+    actions.restartGame()
+    actions.restartDice()
+    actions.restoreShop()
+    setBadGameOverModal(false)
+    setGoodGameOverModal(false)
+    nextStage('waiting')
+  }
+
   return (
     <BrowserRouter>
       <div className={classes.container}>
@@ -163,8 +173,20 @@ const App: React.FC = () => {
                 })()
               }
               {/* Счетчик броска в полукруге */}
-              <div className={classes.circle}>
-                <p>{allRollingsEnd ? <span className={classes.countSpanCircle}>{rollResult.numeral}</span> : <span className={classes.countSpanCircle}>?</span>}</p>
+              <div className={classes.circle}>{
+                (() => {
+                  switch (actionType) {
+                    case 'attack':
+                      return <p>{allRollingsEnd ? <span className={classes.countSpanCircle}>{rollResult.numeral * rollResult.attack}</span> : <span className={classes.countSpanCircle}>?</span>}</p>
+                    case 'coin':
+                      return <p>{allRollingsEnd ? <span className={classes.countSpanCircle}>{rollResult.numeral * rollResult.coin}</span> : <span className={classes.countSpanCircle}>?</span>}</p>
+                    case 'life':
+                      return <p>{allRollingsEnd ? <span className={classes.countSpanCircle}>{rollResult.numeral * rollResult.life}</span> : <span className={classes.countSpanCircle}>?</span>}</p>
+                    default:
+                      return <p>{allRollingsEnd ? <span className={classes.countSpanCircle}>{rollResult.numeral}</span> : <span className={classes.countSpanCircle}>?</span>}</p>
+                  }
+                })()
+              }
               </div>
             </div>
 
@@ -245,6 +267,8 @@ const App: React.FC = () => {
                 Тихо сел и грустно покачал головой дракон <br />
                 И он видом всем намекал о том <br />
                 Что и мне пора бы сдать доспех на металлолом...
+                {/* <button onClick={restart}>рестарт</button> */}
+                <div onClick={restart} className={classes.openShopBtn}>Заново</div>
               </div>
             </GameOver>
 
@@ -255,6 +279,7 @@ const App: React.FC = () => {
                 Тихо сел и грустно покачал головой дракон <br />
                 И он видом всем намекал о том <br />
                 Что и мне пора бы сдать доспех на металлолом...
+                <div onClick={restart} className={classes.openShopBtn}>Заново</div>
               </div>
             </GameOver>
 
@@ -264,32 +289,32 @@ const App: React.FC = () => {
                 <div className={classes.shopProductDragonCategory}>
                   <p>Дракон</p>
                   {
-                    shop.dragon.levelUp ?
-                    <PurchaseButton cost={30} name={"Повышение уровня"} onclick={() => purchase('levelup')}/>
-                    :
-                    <PurchaseButton cost={30} name={"Закончилось"} onclick={() => {}}/>
+                    shop.dragon.levelUp.count ?
+                      <PurchaseButton cost={30} count={shop.dragon.levelUp.count} name={"Повышение уровня"} onclick={() => purchase('levelup')} />
+                      :
+                      <PurchaseOver />
                   }
                 </div>
                 <hr />
                 <div className={classes.shopProductGameCategory}>
                   <p>Кубики</p>
                   {
-                    shop.dices.reroll ?
-                      <PurchaseButton cost={15} name={"Перебросить кубики"} onclick={() => purchase('reroll')}/>
+                    shop.dices.reroll.count ?
+                      <PurchaseButton cost={15} count={shop.dices.reroll.count} name={"Перебросить кубики"} onclick={() => purchase('reroll')} />
                       :
-                      <PurchaseButton cost={15} name={"Закончилось"} onclick={() => {}}/>
+                      <PurchaseOver />
                   }
                   {
-                    shop.dices.rechoice ?
-                      <PurchaseButton cost={15} name={"Другое действие"} onclick={() => purchase('rechoice')}/>
+                    shop.dices.rechoice.count ?
+                      <PurchaseButton cost={15} count={shop.dices.rechoice.count} name={"Другое действие"} onclick={() => purchase('rechoice')} />
                       :
-                      <PurchaseButton cost={15} name={"Закончилось"} onclick={() => {}}/>
+                      <PurchaseOver />
                   }
                   {
-                    shop.dices.double ?                      
-                      <PurchaseButton cost={30} name={"Удвоить результат"} onclick={() => purchase('doubleResult')}/>
+                    shop.dices.double.count ?
+                      <PurchaseButton cost={30} count={shop.dices.double.count} name={"Удвоить результат"} onclick={() => purchase('doubleResult')} />
                       :
-                      <PurchaseButton cost={30} name={"Закончилось"} onclick={() => {}}/>
+                      <PurchaseOver />
                   }
                 </div>
                 <hr />

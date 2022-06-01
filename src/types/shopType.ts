@@ -1,11 +1,23 @@
 export interface IShopState {
     dragon: {
-        levelUp: boolean
+        levelUp: {
+            available: boolean,
+            count: number
+        }
     },
     dices: {
-        rechoice: boolean,
-        reroll: boolean,
-        double: boolean
+        rechoice: {
+            available: boolean,
+            count: number
+        },
+        reroll: {
+            available: boolean,
+            count: number
+        },
+        double: {
+            available: boolean,
+            count: number
+        },
     },
     knight: {
 

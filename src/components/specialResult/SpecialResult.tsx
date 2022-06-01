@@ -21,9 +21,9 @@ const SpecialResult: React.FC = () => {
                   <p>Атака: {actionType === 'attack' ? <span className={classes.countSpan}>{rollResult.attack}</span> : <span>{rollResult.attack}</span>}</p>
                   <p>Лечение: {actionType === 'life' ? <span className={classes.countSpan}>{rollResult.life}</span> : <span>{rollResult.life}</span>}</p>
                   <p>Монеты: {actionType === 'coin' ? <span className={classes.countSpan}>{rollResult.coin}</span> : <span>{rollResult.coin}</span>}</p>
-                  <p>Броня: {actionType === 'shield' ? <span className={classes.countSpan}>{rollResult.shield}</span> : <span>{rollResult.shield}</span>}</p>
-                  <p>Рёв: {actionType === 'roar' ? <span className={classes.countSpan}>{rollResult.roar}</span> : <span>{rollResult.roar}</span>}</p>
+                  <p>Броня: {actionType === 'shield' ? <span className={classes.countSpan}>{rollResult.shield}</span> : <span>{rollResult.shield}</span>}</p>                  
                   <p>Магия: {actionType === 'magic' ? <span className={classes.countSpan}>{rollResult.magic}</span> : <span>{rollResult.magic}</span>}</p>
+                  <p>Обычные: <span className={classes.countSpan}>{rollResult.numeral}</span></p>
                 </div>
                 :
                 <div className={classes.rollResult}>
@@ -31,8 +31,8 @@ const SpecialResult: React.FC = () => {
                   <p>Лечение: ?</p>
                   <p>Монеты: ?</p>
                   <p>Броня: ?</p>
-                  <p>Рёв: ?</p>
                   <p>Магия: ?</p>
+                  <p>Обычные: ?</p>
                 </div>
               }
         </div>

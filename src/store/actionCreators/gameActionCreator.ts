@@ -100,3 +100,13 @@ export const knightLevelUp = (damageUp: number, healthUp: number) => {
         }
     }
 }
+
+export const restartGame = () => {
+    return (dispatch: Dispatch<IGameAction>) => {
+        try {
+            dispatch({ type: GameActionTypes.RESTART})
+        } catch (e) {
+            console.log("ba");
+        }
+    }
+}

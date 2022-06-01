@@ -96,3 +96,13 @@ export const setActionType = (actionType: string) => {
         }
     }
 }
+
+export const restartDice = () => {
+    return (dispatch: Dispatch<IDiceAction>) => {
+        try {
+            dispatch({ type: DiceActionTypes.RESTART})
+        } catch (e) {
+            console.log("ba");
+        }
+    }
+}
