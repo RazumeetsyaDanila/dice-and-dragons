@@ -6,6 +6,7 @@ import { useActions } from './hooks/useActions';
 import classes from './app.module.scss'
 import { useTypedSelector } from './hooks/useTypedSelector';
 import Dragon from './img/dragons/DragonKnight1.svg';
+import Dragon2 from './img/dragons/Dragon.svg';
 import Knight from './img/dragons/DragonKnight2.svg';
 import Death from './img/dragons/Death.svg';
 import RollAllButton from './components/rollAllbutton/RollAllButton';
@@ -63,11 +64,11 @@ const App: React.FC = () => {
 
   useEffect(() => {
     if (stepCount === 5) actions.knightLevelUp(10, 20)
-    if (stepCount === 8) actions.knightLevelUp(10, 20)
+    if (stepCount === 7) actions.knightLevelUp(10, 20)
+    if (stepCount === 9) actions.knightLevelUp(10, 20)
     if (stepCount === 12) actions.knightLevelUp(20, 30)
-    if (stepCount === 15) actions.knightLevelUp(20, 30)
+    if (stepCount === 15) actions.knightLevelUp(20, 50)
     if (stepCount === 17) actions.knightLevelUp(20, 50)
-    if (stepCount === 20) actions.knightLevelUp(20, 50)
   }, [stepCount])
 
   const acceptRoll = () => {
@@ -264,9 +265,11 @@ const App: React.FC = () => {
               <div className={classes.badGameOverContainer}>
                 <p>Конец игры</p>
                 <img src={Death} alt="..." />
-                Тихо сел и грустно покачал головой дракон <br />
-                И он видом всем намекал о том <br />
-                Что и мне пора бы сдать доспех на металлолом...
+                Эх, а было какого нам <br />
+                Вспоминаем, попивая брагу из флакона <br />
+                Сидим мы вместе, говорим о том <br />
+                Что давно уже не время <br />
+                Ни для рыцарей, ни для драконов...
                 {/* <button onClick={restart}>рестарт</button> */}
                 <div onClick={restart} className={classes.openShopBtn}>Заново</div>
               </div>
@@ -275,7 +278,7 @@ const App: React.FC = () => {
             <GameOver visible={goodGameOverModal} setVisible={setGoodGameOverModal}>
               <div className={classes.goodGameOverContainer}>
                 <p>Победа!</p>
-                <img src={Death} alt="..." />
+                <img src={Dragon2} alt="..." />
                 Тихо сел и грустно покачал головой дракон <br />
                 И он видом всем намекал о том <br />
                 Что и мне пора бы сдать доспех на металлолом...
