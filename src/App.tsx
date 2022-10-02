@@ -265,11 +265,10 @@ const App: React.FC = () => {
               <div className={classes.badGameOverContainer}>
                 <p>Конец игры</p>
                 <img src={Death} alt="..." />
-                Эх, а было какого нам <br />
-                Вспоминаем, попивая брагу из флакона <br />
-                Сидим мы вместе, говорим о том <br />
-                Что давно уже не время <br />
-                Ни для рыцарей, ни для драконов...
+                Идет по кругу тот сюжет знакомый <br />
+                Играем эту пьесу опять и опять <br />
+                Где каждый хочет меч вонзить в дракона <br />
+                Но никто не хочет сжимать рукоять...
                 {/* <button onClick={restart}>рестарт</button> */}
                 <div onClick={restart} className={classes.openShopBtn}>Заново</div>
               </div>
