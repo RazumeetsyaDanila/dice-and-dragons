@@ -21,6 +21,18 @@ import GameOver from './components/gameOver/GameOver';
 import ShopModal from './components/shopModal/ShopModal';
 import PurchaseButton from './components/purchaseButton/PurchaseButton';
 import PurchaseOver from './components/purchaseOver/PurchaseOver';
+import TeachingModal from './components/teachingModal/TeachingModal';
+import teachingImg1 from './img/teaching/main.jpg';
+import teachingImg2 from './img/teaching/kubiki.jpg';
+import teachingImg3 from './img/teaching/zdorovie.jpg';
+import teachingImg4 from './img/teaching/bazoviy_uron.jpg';
+import teachingImg5 from './img/teaching/moneti.jpg';
+import teachingImg6 from './img/teaching/brosok.jpg';
+import teachingImg7 from './img/teaching/vibor.jpg';
+import teachingImg8 from './img/teaching/kubiki2.jpg';
+import teachingImg9 from './img/teaching/resultat.jpg';
+import teachingImg10 from './img/teaching/magazin.jpg';
+import teachingImg11 from './img/teaching/final.jpg';
 
 const App: React.FC = () => {
   const { setDices, nextTurn, nextStage, getCoin, dragonDamaged, healing, knightDamaged, knightDamageUp } = useActions()
@@ -34,6 +46,8 @@ const App: React.FC = () => {
   const [startGameModal, setStartGameModal] = useState(true)
   const [badGameOverModal, setBadGameOverModal] = useState(false)
   const [goodGameOverModal, setGoodGameOverModal] = useState(false)
+  const [teachingModal, setTeachingModal] = useState(false)
+  const [teachingStep, setTeachingStep] = useState(0)
   const [shopModal, setShopModal] = useState(false)
 
   const allRollingsEnd = !dice[0].rolling && !dice[1].rolling && !dice[2].rolling && !dice[3].rolling && !dice[4].rolling && !dice[5].rolling
@@ -48,6 +62,12 @@ const App: React.FC = () => {
     actions.setActionType(actionType)
     setRechoiceActionModal(false)
   }
+
+  useEffect(() => {
+    const teaching = localStorage.getItem("dnd_teaching")
+    console.log(teaching)
+    teaching == null && setTeachingModal(true)
+  }, [])
 
   useEffect(() => {
     setTimeout(() => {
@@ -131,7 +151,24 @@ const App: React.FC = () => {
     actions.restoreShop()
     setBadGameOverModal(false)
     setGoodGameOverModal(false)
+    setStartGameModal(true)
     nextStage('waiting')
+  }
+
+  const startTeaching = () => {
+    setTeachingStep(0)
+    setTeachingModal(true)
+  }
+  const teachNextStep = () => {
+    setTeachingStep(teachingStep + 1)
+  }
+  const teachPrevStep = () => {
+    setTeachingStep(teachingStep - 1)
+  }
+  const teachEnd = () => {
+    setTeachingModal(false)
+    setStartGameModal(false)
+    localStorage.setItem("dnd_teaching", "true")
   }
 
   return (
@@ -238,7 +275,7 @@ const App: React.FC = () => {
                   <p>{knight.damage}</p>
                 </div>
               </div>
-              <div className={classes.openShopBtn} onClick={() => setShopModal(true)}>Магазин</div>
+              <div className={classes.openShopBtn + " mt-[16px]"} onClick={() => setShopModal(true)}>Магазин</div>
             </div>
 
             {/* Окно выбора действия */}
@@ -253,10 +290,11 @@ const App: React.FC = () => {
             {/* Стартовое окно */}
             <Modal visible={startGameModal} setVisible={setStartGameModal}>
               <div className={classes.openingSpeech}>
-                <p style={{ fontSize: 18 + 'px' }}>Добро пожаловать!</p>
-                <p style={{ fontSize: 18 + 'px' }}>Ты - дракон! Убей рыцаря.</p>
+                {/* <p style={{ fontSize: 18 + 'px' }}>Добро пожаловать!</p>
+                <p style={{ fontSize: 18 + 'px' }}>Ты - дракон! Убей рыцаря.</p> */}
                 {/* <p style={{ fontSize: 12 + 'px' }}>(моя игра, мои правила)</p> */}
                 <div className={classes.startGamebtn} onClick={() => setStartGameModal(false)}>Начать игру</div>
+                <div className={classes.startGamebtn} onClick={startTeaching}>Обучение</div>
               </div>
             </Modal>
 
@@ -270,7 +308,7 @@ const App: React.FC = () => {
                 Где каждый хочет меч вонзить в дракона <br />
                 Но никто не хочет сжимать рукоять...
                 {/* <button onClick={restart}>рестарт</button> */}
-                <div onClick={restart} className={classes.openShopBtn}>Заново</div>
+                <div onClick={restart} className={classes.openShopBtn + " mt-[16px]"}>Заново</div>
               </div>
             </GameOver>
 
@@ -281,9 +319,10 @@ const App: React.FC = () => {
                 Тихо сел и грустно покачал головой дракон <br />
                 И он видом всем намекал о том <br />
                 Что и мне пора бы сдать доспех на металлолом...
-                <div onClick={restart} className={classes.openShopBtn}>Заново</div>
+                <div onClick={restart} className={classes.openShopBtn + " mt-[16px]"}>Заново</div>
               </div>
             </GameOver>
+
 
             {/* shop */}
             <ShopModal visible={shopModal} setVisible={setShopModal} coinCount={dragon.wallet}>
@@ -326,6 +365,106 @@ const App: React.FC = () => {
                 </div>
               </div>
             </ShopModal>
+
+            <TeachingModal visible={teachingModal} setVisible={setTeachingModal}>
+              <div>
+                {(() => {
+                  switch (teachingStep) {
+                    case 0:
+                      return <div>
+                        <div className='w-[480px] flex justify-center'>
+                          <img className='rounded-[4px] mt-[10px] w-[354px]' src={teachingImg1} alt="..." />
+                        </div>
+                        <p className='flex items-center text-center text-[#1D3557] w-[480px] h-[104px] pl-[5px] pr-[5px]'>Добро пожаловать! Dice'n'Dragons это игра о кубиках и драконах. И еще немного о рыцарях... Вопреки традициям, вы не будете убивать дракона. Вы будете сражаться против рыцаря. </p>
+                      </div>
+                    case 1:
+                      return <div>
+                        <div className='w-[480px] flex justify-center'>
+                          <img className='border-solid border-2 border-[#1d3557] rounded-[4px] mt-[10px]' src={teachingImg2} alt="..." />
+                        </div>
+                        <p className='flex items-center text-center text-[#1D3557] w-[480px] h-[104px] pl-[5px] pr-[5px]'>Вам повезло, ваше оружие - игральные кости. Почти такие же, как в нардах. С помощью них, вы попытаетесь сразить несчастного рыцаря. Кстати, рыцарь тоже попытается вас сразить этими же кубиками, тут вам, конечно, не повезло.</p>
+                      </div>
+                    case 2:
+                      return <div>
+                        <div className='w-[480px] flex justify-center'>
+                          <img className='border-solid border-2 border-[#1d3557] rounded-[4px] mt-[10px]' src={teachingImg3} alt="..." />
+                        </div>
+                        <p className='flex items-center text-center text-[#1D3557] w-[480px] h-[104px] pl-[5px] pr-[5px]'>Над вашим драконом располагается шкала здоровья и уровень. Не поверите, но над моим рыцарем это все тоже располагается. Вы можете возмутиться тем, что у рыцаря больше здоровья, чем у дракона. Вы имеете на это право.</p>
+                      </div>
+                    case 3:
+                      return <div>
+                        <div className='w-[480px] flex justify-center'>
+                          <img className='border-solid border-2 border-[#1d3557] rounded-[4px] mt-[10px]' src={teachingImg4} alt="..." />
+                        </div>
+                        <p className='flex items-center text-center text-[#1D3557] w-[480px] h-[104px] pl-[5px] pr-[5px]'>Уровень влияет на максимальное количество здоровья и базовый урон, который отображается снизу (слева - урон дракона, справа - рыцаря). Базовый урон прибавляется к сумме урона, выпавшей на кубиках, когда вы или рыцарь совершаете атаку.</p>
+                      </div>
+                    case 4:
+                      return <div>
+                        <div className='w-[480px] flex justify-center'>
+                          <img className='border-solid border-2 border-[#1d3557] rounded-[4px] mt-[10px]' src={teachingImg5} alt="..." />
+                        </div>
+                        <p className='flex items-center text-center text-[#1D3557] w-[480px] h-[104px] pl-[5px] pr-[5px]'>Еще, у вас будут монеты, за которые вы сможете перебрасывать кубики и усиливать свои ходы.</p>
+                      </div>
+                    case 5:
+                      return <div>
+                        <div className='w-[480px] flex justify-center'>
+                          <img className='border-solid border-2 border-[#1d3557] rounded-[4px] mt-[10px]' src={teachingImg6} alt="..." />
+                        </div>
+                        <p className='flex items-center text-center text-[#1D3557] w-[480px] h-[104px] pl-[5px] pr-[5px]'>Каждый ход включает в себя 2 фазы. Первая фаза - бросок кубиков. Вторая фаза - усиление. Чтобы начать ход, нажмите на иконку с кубиками.</p>
+                      </div>
+                    case 6:
+                      return <div>
+                        <div className='w-[480px] flex justify-center'>
+                          <img className='border-solid border-2 border-[#1d3557] rounded-[4px] mt-[10px]' src={teachingImg7} alt="..." />
+                        </div>
+                        <p className='flex items-center text-center text-[#1D3557] w-[480px] h-[104px] pl-[5px] pr-[5px]'>Перед броском, вам необходимо выбрать одно из трех действий, которое вы хотите совершить. Можно атаковать, полечиться или собрать монеты.</p>
+                      </div>
+                    case 7:
+                      return <div>
+                        <div className='w-[480px] flex justify-center'>
+                          <img className='border-solid border-2 border-[#1d3557] rounded-[4px] mt-[10px]' src={teachingImg8} alt="..." />
+                        </div>
+                        <p className='flex items-center text-center text-[#1D3557] w-[480px] h-[104px] pl-[5px] pr-[5px]'>Существует 4 типа кубиков, которые могут выпасть. Вот они, слева направо: кубик монет, кубик атаки, кубик лечения и обычный кубик. Они помечаются соответствующими красными кружочками.</p>
+                      </div>
+                    case 8:
+                      return <div>
+                        <div className='w-[480px] flex justify-center'>
+                          <img className='border-solid border-2 border-[#1d3557] rounded-[4px] mt-[10px]' src={teachingImg9} alt="..." />
+                        </div>
+                        <p className='flex items-center text-center text-[#1D3557] w-[480px] h-[104px] pl-[5px] pr-[5px]'>Количество нанесенного урона, вылеченного здоровья или собранных вами монет вычисляется путем перемножения суммы, выпавшей на обычных кубиках и суммы, выпавшей на кубиках, соответствующих вашему действию. В данном случае, вы заработали бы 65 монет.</p>
+                      </div>
+                    case 9:
+                      return <div>
+                        <div className='w-[480px] flex justify-center'>
+                          <img className='border-solid border-2 border-[#1d3557] rounded-[4px] mt-[10px]' src={teachingImg10} alt="..." />
+                        </div>
+                        <p className='flex items-center text-center text-[#1D3557] w-[480px] h-[104px] pl-[5px] pr-[5px]'>Во время второй фазы вы можете усилить свой ход. Например, перебросить нужные кубики, или купить за монеты какое нибудь улучшение в магазине. </p>
+                      </div>
+                    case 10:
+                      return <div>
+                        <div className='w-[480px] flex justify-center'>
+                          <img className='border-solid border-2 border-[#1d3557] rounded-[4px] mt-[10px]' src={teachingImg11} alt="..." />
+                        </div>
+                        <p className='flex items-center text-center text-[#1D3557] w-[480px] h-[104px] pl-[5px] pr-[5px]'>После того, как вы применили все усиления, вы можете закончить ход, нажав на стрелку. Затем рыцарь тоже бросит кубики и попытается вас атаковать. На этом все, удачи!</p>
+                      </div>                      
+                  }
+                })()}
+
+                <div className='flex justify-center'>
+                  {
+                    teachingStep > 1 && <div onClick={teachPrevStep} className={classes.openShopBtn + " mr-[20px]"}>Назад</div>
+                  }
+                  {
+                    teachingStep == 10 && <div onClick={teachEnd} className={classes.openShopBtn}>Начать игру</div>
+                  }
+                  {
+                    teachingStep < 10 && <div onClick={teachNextStep} className={classes.openShopBtn}>Далее</div>
+                  }
+                </div>
+                <p className='text-center text-[#1D3557] mt-[4px]'>{teachingStep}/10</p>
+              </div>
+
+            </TeachingModal>
 
           </div>
         </div>
