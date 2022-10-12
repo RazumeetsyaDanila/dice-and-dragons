@@ -214,7 +214,16 @@ const App: React.FC = () => {
                 (() => {
                   switch (actionType) {
                     case 'attack':
-                      return <p>{allRollingsEnd ? <span className={classes.countSpanCircle}>{rollResult.numeral * rollResult.attack}<span className="text-[18px]">+{dragon.damage}</span></span> : <span className={classes.countSpanCircle}>?</span>}</p>
+                      return <p>{allRollingsEnd ?
+                        <span className={classes.countSpanCircle}>{rollResult.numeral * rollResult.attack}
+                          <span className="text-[18px]">
+                            +<svg width="16px" height="16px" version="1.1" viewBox="0 0 512 512" >
+                              <path fill="#8b0000" d={choiceAttackSvg_d} />
+                            </svg>{dragon.damage}
+                          </span>
+                        </span>
+                        :
+                        <span className={classes.countSpanCircle}>?</span>}</p>
                     case 'coin':
                       return <p>{allRollingsEnd ? <span className={classes.countSpanCircle}>{rollResult.numeral * rollResult.coin}</span> : <span className={classes.countSpanCircle}>?</span>}</p>
                     case 'life':
@@ -445,7 +454,7 @@ const App: React.FC = () => {
                           <img className='border-solid border-2 border-[#1d3557] rounded-[4px] mt-[10px]' src={teachingImg11} alt="..." />
                         </div>
                         <p className='flex items-center text-center text-[#1D3557] w-[480px] h-[104px] pl-[5px] pr-[5px]'>После того, как вы применили все усиления, вы можете закончить ход, нажав на стрелку. Затем рыцарь тоже бросит кубики и попытается вас атаковать. На этом все, удачи!</p>
-                      </div>                      
+                      </div>
                   }
                 })()}
 

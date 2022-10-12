@@ -57,7 +57,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 36px;
+    padding-top: 16px;
     position: relative;
     top: 2px;
     border: 2px solid #1D3557;
@@ -67,6 +67,8 @@
 }
 
 .countSpanCircle{
+    display: flex;
+    align-items: center;
     font-family: 'Anton', sans-serif;
     font-size: 48px;
     color: #8b0000;
