@@ -65,7 +65,6 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const teaching = localStorage.getItem("dnd_teaching")
-    console.log(teaching)
     teaching == null && setTeachingModal(true)
   }, [])
 
@@ -215,7 +214,7 @@ const App: React.FC = () => {
                 (() => {
                   switch (actionType) {
                     case 'attack':
-                      return <p>{allRollingsEnd ? <span className={classes.countSpanCircle}>{rollResult.numeral * rollResult.attack}</span> : <span className={classes.countSpanCircle}>?</span>}</p>
+                      return <p>{allRollingsEnd ? <span className={classes.countSpanCircle}>{rollResult.numeral * rollResult.attack}<span className="text-[18px]">+{dragon.damage}</span></span> : <span className={classes.countSpanCircle}>?</span>}</p>
                     case 'coin':
                       return <p>{allRollingsEnd ? <span className={classes.countSpanCircle}>{rollResult.numeral * rollResult.coin}</span> : <span className={classes.countSpanCircle}>?</span>}</p>
                     case 'life':
